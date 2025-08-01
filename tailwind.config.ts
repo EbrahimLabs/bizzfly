@@ -10,7 +10,7 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'dot-pattern': "radial-gradient(hsl(var(--foreground) / 0.1) 1px, transparent 1px)",
+        'dot-pattern': "radial-gradient(hsl(var(--foreground)_/_0.1)_1px,transparent_1px)",
       },
       backgroundSize: {
         'dot-pattern': '16px 16px',

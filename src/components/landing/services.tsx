@@ -75,10 +75,10 @@ export default function Services() {
             >
               <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col text-center">
                 <CardHeader className="p-6 pb-0">
-                    <div className="relative mx-auto mb-6 flex h-40 w-full items-center justify-center rounded-lg bg-dot-pattern [background-size:16px_16px]">
+                    <div className="relative mx-auto mb-6 flex h-40 w-full items-center justify-center rounded-lg bg-dot-pattern">
                         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent"></div>
                         <motion.div 
-                          className="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary/90 shadow-lg"
+                          className="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary shadow-lg"
                           animate={{
                             y: [0, -10, 0],
                           }}
