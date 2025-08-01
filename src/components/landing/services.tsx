@@ -67,8 +67,13 @@ export default function Services() {
           variants={containerVariants}
         >
           {services.map((service, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 group h-full flex flex-col text-center">
+            <motion.div 
+              key={index} 
+              variants={itemVariants}
+              whileHover={{ scale: 1.05, y: -5 }}
+              transition={{ type: "spring", stiffness: 300, damping: 10 }}
+            >
+              <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col text-center">
                 <CardHeader className="p-6 pb-0">
                     <div className="relative mx-auto mb-6 flex h-40 w-full items-center justify-center rounded-lg bg-dot-pattern [background-size:16px_16px]">
                         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent"></div>
