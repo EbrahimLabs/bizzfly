@@ -35,7 +35,7 @@ export default function Header() {
         animate={{ y: 0, opacity: 1 }}
         transition={{ type: "spring", stiffness: 70, damping: 20 }}
       >
-        <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
+        <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
           <BizzFlyLogo />
           <nav className="hidden md:flex items-center gap-8 text-base font-medium">
             {navLinks.map((link) => (
