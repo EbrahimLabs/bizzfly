@@ -2,6 +2,7 @@
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
 import { Globe, DollarSign, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
+import { useState, useEffect } from "react";
 
 const services = [
   {
@@ -44,23 +45,32 @@ const itemVariants = {
 };
 
 const Particle = ({ delay }: { delay: number }) => {
-  const size = Math.random() * 1.5 + 0.5;
-  const x = Math.random() * 100;
+  const [style, setStyle] = useState({});
+  const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    const size = Math.random() * 1.5 + 0.5;
+    const x = Math.random() * 100;
+    setStyle({
+      width: size,
+      height: size,
+      left: `${x}%`,
+    });
+    setDuration(Math.random() * 2 + 3);
+  }, []);
+
+  if (!duration) return null;
 
   return (
     <motion.div
       className="absolute bottom-0 bg-white/50 rounded-full"
-      style={{
-        width: size,
-        height: size,
-        left: `${x}%`,
-      }}
+      style={style}
       animate={{
         y: '-200px',
       }}
       transition={{
         delay,
-        duration: Math.random() * 2 + 3,
+        duration,
         ease: "linear",
         repeat: Infinity,
         repeatType: 'loop',
