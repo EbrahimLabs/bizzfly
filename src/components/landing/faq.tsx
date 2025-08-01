@@ -33,16 +33,14 @@ export default function Faq() {
     <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
       <div className="container mx-auto max-w-4xl px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
+          <span className="text-sm font-semibold uppercase tracking-wider text-primary">FAQ</span>
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
                 Frequently Asked Questions
             </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Your questions, answered.
-            </p>
         </div>
         <Accordion type="single" collapsible className="w-full mt-12 space-y-2">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-secondary/30 border border-border rounded-lg px-6">
+            <AccordionItem key={index} value={`item-${index}`} className="bg-card border border-border rounded-lg px-6">
               <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">{faq.question}</AccordionTrigger>
               <AccordionContent className="text-base text-muted-foreground pb-4">
                 {faq.answer}

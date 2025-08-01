@@ -1,6 +1,6 @@
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { Menu } from "lucide-react";
+import { Menu, ArrowRight } from "lucide-react";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
 const BizzFlyLogo = () => (
@@ -24,7 +24,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-transparent">
+    <header className="sticky top-0 z-50 bg-background/80 backdrop-blur-sm">
       <div className="container mx-auto flex h-20 items-center justify-between px-4 md:px-6">
         <BizzFlyLogo />
         <nav className="hidden md:flex items-center gap-8 text-base font-medium">
@@ -35,11 +35,8 @@ export default function Header() {
           ))}
         </nav>
         <div className="hidden md:flex items-center gap-4">
-            <Button asChild variant="ghost">
-                <Link href="#">Log In</Link>
-            </Button>
-            <Button asChild className="rounded-full px-6 transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground">
-                <Link href="#contact">Sign Up</Link>
+            <Button asChild className="rounded-full px-6 transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
+                <Link href="#contact">Get Started <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" /></Link>
             </Button>
         </div>
         <Sheet>
@@ -60,9 +57,6 @@ export default function Header() {
                 ))}
               </nav>
               <div className="flex flex-col gap-4 mt-auto">
-                <Button asChild variant="outline" className="w-full">
-                  <Link href="#">Log In</Link>
-                </Button>
                 <Button asChild className="w-full">
                   <Link href="#contact">Sign Up</Link>
                 </Button>
