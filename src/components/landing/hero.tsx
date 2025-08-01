@@ -63,15 +63,13 @@ export default function Hero() {
               className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-foreground"
               variants={itemVariants}
             >
-              <span className="text-primary">Global Ambition.</span> <br />
-              Beyond <DiamondIcon className="inline-block w-8 h-8 md:w-12 md:h-12 -mb-1 md:-mb-2 text-foreground" /> Limits. <br />
-              <span className="text-primary">Amplified By BizzFly.</span>
+              Your <span className="text-primary">Gateway</span> to <br /> Global Business.
             </motion.h1>
             <motion.p 
               className="max-w-[700px] text-muted-foreground md:text-xl"
               variants={itemVariants}
             >
-             Design services at your fingertips. Pause or cancel anytime.
+             We empower Bangladeshi entrepreneurs to break barriers, offering seamless US & UK company formation, international banking, and payment gateway solutions.
             </motion.p>
             <motion.div 
               className="flex flex-col gap-2 min-[400px]:flex-row mt-4"
