@@ -38,7 +38,8 @@ export default function Hero() {
   };
 
   return (
-    <section className="w-full pt-20 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
+    <section className="relative w-full pt-20 pb-16 md:pt-32 md:pb-24 lg:pt-40 lg:pb-32">
+       <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(hsl(var(--foreground)_/_0.1)_1px,transparent_1px)] [background-size:16px_16px]"></div>
       <motion.div 
         className="container mx-auto px-4 md:px-6"
         variants={containerVariants}
