@@ -15,7 +15,7 @@ export default {
         'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))',
       },
       backgroundSize: {
-        'grid': '30px 30px',
+        'grid': '20px 20px',
         'particle-pattern': '2rem 2rem'
       },
       fontFamily: {
