@@ -92,7 +92,7 @@ export default function Usp() {
                   </Link>
               </Button>
             </motion.div>
-          </div>
+          </motion.div>
         </div>
       </motion.div>
     </section>
