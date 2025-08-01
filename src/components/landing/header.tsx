@@ -45,9 +45,12 @@ export default function Header() {
             ))}
           </nav>
           <div className="hidden md:flex items-center gap-4">
-              <Button asChild className="rounded-full px-6 transition-transform hover:scale-105 group bg-primary hover:bg-primary/90 text-primary-foreground">
-                  <Link href="#contact">Let's Talk <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" /></Link>
-              </Button>
+            <div className="relative group">
+                <div className="absolute -inset-0.5 bg-gradient-to-r from-orange-600 to-yellow-500 rounded-full blur opacity-75 group-hover:opacity-100 transition duration-1000 group-hover:duration-200 animate-tilt"></div>
+                 <Button asChild className="relative rounded-full px-6 transition-transform hover:scale-105 group bg-primary hover:bg-primary/90 text-primary-foreground">
+                    <Link href="#contact">Let's Talk <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" /></Link>
+                </Button>
+            </div>
           </div>
           <Sheet>
             <SheetTrigger asChild>
