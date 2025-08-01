@@ -129,7 +129,7 @@ export default function Services() {
                       </motion.div>
                   </div>
                 </CardHeader>
-                <CardContent className="p-6 pt-2 flex-grow flex flex-col">
+                <CardContent className="p-8 pt-4 flex-grow flex flex-col">
                     <CardTitle className="font-headline text-2xl mb-2 text-left">{service.title}</CardTitle>
                     <CardDescription className="text-left">
                       {service.description}
