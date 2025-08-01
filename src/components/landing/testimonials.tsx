@@ -3,25 +3,28 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 
 const testimonials = [
   {
-    name: "Sarah Johnson",
-    title: "CEO, Innovate Inc.",
-    avatar: "SJ",
+    name: "Kamrul Hasan",
+    title: "CEO, StartupBD",
+    avatar: "KH",
     image: "https://placehold.co/100x100.png",
-    text: "Automatix has revolutionized our operations. The time we've saved on manual tasks is incredible, allowing us to focus on what truly matters - innovation and growth. A must-have tool for any modern business.",
+    text: "BizzFly made it possible for us to finally access Stripe and global markets. Their end-to-end service is seamless and their support is top-notch. Highly recommended for any Bangladeshi entrepreneur.",
+    dataAiHint: "male entrepreneur",
   },
   {
-    name: "Michael Chen",
-    title: "Marketing Director, ScaleUp",
-    avatar: "MC",
+    name: "Ayesha Ahmed",
+    title: "Freelance Designer",
+    avatar: "AA",
     image: "https://placehold.co/100x100.png",
-    text: "The marketing automation features are a game-changer. We've seen a 200% increase in lead conversion since implementing Automatix. The platform is intuitive, powerful, and the support is outstanding.",
+    text: "As a freelancer, getting an international debit card was a huge challenge. BizzFly handled everything, from company formation to opening a Mercury account. I can now easily receive payments from my international clients.",
+    dataAiHint: "female designer",
   },
   {
-    name: "Jessica Rodriguez",
-    title: "Founder, Creative Solutions",
-    avatar: "JR",
+    name: "Rakib Mahmud",
+    title: "Founder, E-commerce Store",
+    avatar: "RM",
     image: "https://placehold.co/100x100.png",
-    text: "As a small business owner, Automatix has been invaluable. It's like having an extra team member dedicated to efficiency. I can't imagine running my business without it anymore. Highly recommended!",
+    text: "Expanding my e-commerce business globally seemed impossible from Bangladesh. BizzFly's expertise in UK company formation and payment gateways was a game-changer for us. Invaluable service!",
+    dataAiHint: "male founder",
   },
 ];
 
@@ -34,7 +37,7 @@ export default function Testimonials() {
                 What Our Customers Say
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Real stories from businesses transformed by Automatix.
+                Real stories from businesses transformed by BizzFly.
             </p>
         </div>
         <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
@@ -44,7 +47,7 @@ export default function Testimonials() {
                 <p className="text-muted-foreground mb-6 flex-grow">"{testimonial.text}"</p>
                 <div className="flex items-center gap-4 pt-4 border-t border-border/50">
                   <Avatar className="h-12 w-12">
-                    <AvatarImage src={testimonial.image} alt={testimonial.name} />
+                    <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
                     <AvatarFallback>{testimonial.avatar}</AvatarFallback>
                   </Avatar>
                   <div>

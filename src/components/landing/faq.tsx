@@ -7,24 +7,24 @@ import {
 
 const faqs = [
   {
-    question: "What is Automatix?",
-    answer: "Automatix is a platform designed to help businesses automate their processes, from marketing and sales to operations and customer support, enabling them to scale efficiently.",
+    question: "Why do I need a US or UK company?",
+    answer: "A foreign company gives you access to global payment gateways like Stripe and PayPal, international banking, and enhances your business's credibility, which is crucial for working with international clients.",
   },
   {
-    question: "Who is Automatix for?",
-    answer: "Automatix is for startups, small to medium-sized businesses, and enterprises looking to streamline their workflows, reduce manual tasks, and drive growth through intelligent automation.",
+    question: "Can I get a physical debit card?",
+    answer: "Yes, our partner banks like Mercury, Relay, and Wise provide international debit cards that you can use for online payments, ad campaigns, and other business expenses worldwide.",
+  },
+  {
+    question: "Who is BizzFly for?",
+    answer: "BizzFly is for Bangladeshi freelancers, startups, e-commerce businesses, agencies, and any entrepreneur who wants to operate globally, receive international payments, and overcome local financial restrictions.",
+  },
+  {
+    question: "How long does the process take?",
+    answer: "The timeline varies, but we prioritize a fast and hassle-free process. Company formation and bank account setup are typically completed within a few weeks, depending on the country and services chosen.",
   },
   {
     question: "What kind of support can I expect?",
-    answer: "We offer 24/7 customer support via chat and email. Our dedicated team is always ready to help you with any questions or issues you may encounter while using the platform.",
-  },
-  {
-    question: "Can I integrate Automatix with my existing tools?",
-    answer: "Yes, Automatix offers a wide range of integrations with popular tools and platforms. You can connect your favorite apps to create seamless, automated workflows across your entire tech stack.",
-  },
-  {
-    question: "Is there a free trial available?",
-    answer: "Yes, we offer a 14-day free trial so you can explore all of Automatix's features and see how it can benefit your business. No credit card is required to sign up.",
+    answer: "We offer end-to-end support in both English and Bangla. Our team provides personalized guidance through every step, from company formation to ongoing compliance, ensuring you are never alone.",
   },
 ];
 

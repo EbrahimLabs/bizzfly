@@ -6,7 +6,7 @@ export default function Partners() {
             <div className="container mx-auto px-4 md:px-6">
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
                     <h3 className="text-sm font-semibold tracking-wider uppercase text-muted-foreground">
-                        POWERING THE WORLD'S BEST COMPANIES
+                        Trusted partnerships with international banks and payment providers
                     </h3>
                     <div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-4 md:gap-x-12 lg:gap-x-16">
                         {partnerNames.map((name) => (

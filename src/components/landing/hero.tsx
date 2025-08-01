@@ -9,10 +9,10 @@ export default function Hero() {
         <div className="grid gap-6">
           <div className="flex flex-col justify-center items-center space-y-6 text-center">
             <h1 className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-foreground">
-              Supercharge your business with AI
+              Your Gateway to Global Business
             </h1>
             <p className="max-w-[600px] text-muted-foreground md:text-xl">
-              Automatix is the all-in-one platform to automate your marketing, sales, and operations.
+             We help Bangladeshi entrepreneurs access international markets.
             </p>
             <div className="flex flex-col gap-2 min-[400px]:flex-row mt-4">
               <Button asChild size="lg" className="rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground">

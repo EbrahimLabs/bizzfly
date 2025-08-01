@@ -2,10 +2,10 @@ import Image from "next/image";
 import { Check } from "lucide-react";
 
 const usps = [
-  { text: "Seamlessly integrate with your existing tools and workflows." },
-  { text: "Build powerful automations with our no-code, visual editor." },
-  { text: "Leverage AI to make smarter, data-driven decisions." },
-  { text: "Scale your operations with a platform built for growth." },
+  { text: "Specialized expertise for Bangladeshi clients." },
+  { text: "End-to-end service from company formation to compliance." },
+  { text: "Fast, hassle-free processes with personalized support." },
+  { text: "Transparent and competitive pricing." },
 ];
 
 export default function Usp() {
@@ -15,10 +15,10 @@ export default function Usp() {
         <div className="grid items-center gap-10 lg:grid-cols-2 lg:gap-16">
           <div className="space-y-4">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-              How It Works
+              Why Choose BizzFly?
             </h2>
             <p className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-             Get up and running with Automatix in just a few simple steps. Connect your apps, build your workflows, and let the automation begin.
+             We remove barriers for Bangladeshi clients, allowing them to receive payments from customers worldwide, gain international credibility, and operate without limitations.
             </p>
             <ul className="grid gap-4">
               {usps.map((usp, index) => (
@@ -35,10 +35,10 @@ export default function Usp() {
           </div>
            <Image
             src="https://placehold.co/600x400.png"
-            data-ai-hint="workflow automation dashboard"
+            data-ai-hint="global business meeting"
             width={600}
             height={400}
-            alt="How it works"
+            alt="Why BizzFly"
             className="mx-auto aspect-video overflow-hidden rounded-xl object-cover sm:w-full"
           />
         </div>

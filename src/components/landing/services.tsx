@@ -1,36 +1,36 @@
 import { Card, CardHeader, CardTitle, CardDescription } from "@/components/ui/card";
-import { Zap, Bot, BarChart, Settings, ShoppingBag, MessageCircle } from "lucide-react";
+import { Building, Globe, Landmark, ShieldCheck, Banknote, Briefcase } from "lucide-react";
 
 const services = [
   {
-    icon: <Zap className="h-8 w-8 text-primary" />,
-    title: "Workflow Automation",
-    description: "Automate repetitive tasks and build complex workflows with our intuitive drag-and-drop builder.",
+    icon: <Building className="h-8 w-8 text-primary" />,
+    title: "US & UK Company Formation",
+    description: "Register LLCs in the US or companies in the UK with full compliance support.",
   },
   {
-    icon: <Bot className="h-8 w-8 text-primary" />,
-    title: "AI-Powered Assistants",
-    description: "Leverage our intelligent chatbots and assistants to provide instant support and handle customer queries.",
+    icon: <Globe className="h-8 w-8 text-primary" />,
+    title: "Payment Gateway Setup",
+    description: "Open international payment gateways like Stripe and PayPal for your business.",
   },
   {
-    icon: <BarChart className="h-8 w-8 text-primary" />,
-    title: "Data & Analytics",
-    description: "Gain valuable insights from your data with our powerful analytics and reporting tools.",
+    icon: <Landmark className="h-8 w-8 text-primary" />,
+    title: "Business Bank Accounts",
+    description: "Access global banking solutions with international debit cards for all your needs.",
   },
   {
-    icon: <ShoppingBag className="h-8 w-8 text-primary" />,
-    title: "E-commerce Automation",
-    description: "Streamline your online store operations, from inventory management to order fulfillment.",
+    icon: <ShieldCheck className="h-8 w-8 text-primary" />,
+    title: "Tax & Compliance",
+    description: "We support you with tax filing and ongoing compliance for your US & UK companies.",
   },
   {
-    icon: <MessageCircle className="h-8 w-8 text-primary" />,
-    title: "Marketing Automation",
-    description: "Create and manage automated email campaigns, social media posts, and targeted ads.",
+    icon: <Briefcase className="h-8 w-8 text-primary" />,
+    title: "International Debit Cards",
+    description: "Obtain international debit cards for ads, SaaS subscriptions, and other payments.",
   },
   {
-    icon: <Settings className="h-8 w-8 text-primary" />,
-    title: "Custom Integrations",
-    description: "Connect Automatix with your favorite tools and platforms using our flexible API and webhooks.",
+    icon: <Banknote className="h-8 w-8 text-primary" />,
+    title: "Global Payment Solutions",
+    description: "Receive payments from customers worldwide without financial restrictions.",
   },
 ];
 
@@ -40,10 +40,10 @@ export default function Services() {
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
-            Unlock the Power of Automation
+            Unlock Your Global Potential
           </h2>
           <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Discover a comprehensive suite of features designed to help you build, manage, and scale your business with ease.
+            Discover a comprehensive suite of services designed to help you build, manage, and scale your international business from Bangladesh.
           </p>
         </div>
         <div className="mx-auto grid items-start gap-8 sm:max-w-4xl sm:grid-cols-2 md:gap-12 lg:max-w-5xl lg:grid-cols-3 mt-12">
