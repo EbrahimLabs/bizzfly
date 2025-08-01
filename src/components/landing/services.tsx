@@ -1,22 +1,22 @@
 "use client";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { BrainCircuit, ThumbsUp, Users } from "lucide-react";
+import { Globe, DollarSign, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: <BrainCircuit className="h-8 w-8 text-white" />,
-    title: "Innovative Approach",
+    icon: <Globe className="h-8 w-8 text-white" />,
+    title: "US/UK Company Formation",
     description: "Establish your business identity in the world's leading markets. We handle everything from registration to compliance, giving you a credible global presence.",
   },
   {
-    icon: <ThumbsUp className="h-8 w-8 text-white" />,
-    title: "Seamless Experience",
+    icon: <DollarSign className="h-8 w-8 text-white" />,
+    title: "Payment Gateway Setup",
     description: "Access Stripe, PayPal, and more. We navigate the complexities to get your business approved, so you can accept payments from anyone, anywhere.",
   },
   {
-    icon: <Users className="h-8 w-8 text-white" />,
-    title: "Ongoing Partnership",
+    icon: <Landmark className="h-8 w-8 text-white" />,
+    title: "Business Bank Accounts",
     description: "Open accounts with Mercury, Wise, and other leading platforms. Manage your international funds with ease and get a professional edge.",
   },
 ];
