@@ -107,6 +107,7 @@ export default function Services() {
               variants={itemVariants}
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
+              className="h-full"
             >
               <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col">
                 <CardHeader className="p-8">
