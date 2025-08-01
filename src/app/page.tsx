@@ -15,7 +15,7 @@ export default function Home() {
         className="absolute top-0 left-0 w-full h-full -z-10"
         style={{
           backgroundImage: 'radial-gradient(circle, hsl(var(--foreground) / 0.05) 1px, transparent 1px)',
-          backgroundSize: '30px 30px'
+          backgroundSize: '16px 16px'
         }}
       />
       <Header />
