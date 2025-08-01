@@ -1,22 +1,22 @@
 "use client";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Building, Globe, Landmark, ShieldCheck, Banknote, Briefcase } from "lucide-react";
+import { BrainCircuit, ThumbsUp, Users } from "lucide-react";
 import { motion } from "framer-motion";
 
 const services = [
   {
-    icon: <Building className="h-8 w-8 text-primary" />,
-    title: "US & UK Company Formation",
+    icon: <BrainCircuit className="h-8 w-8 text-white" />,
+    title: "Innovative Approach",
     description: "Establish your business identity in the world's leading markets. We handle everything from registration to compliance, giving you a credible global presence.",
   },
   {
-    icon: <Globe className="h-8 w-8 text-primary" />,
-    title: "Payment Gateway Setup",
+    icon: <ThumbsUp className="h-8 w-8 text-white" />,
+    title: "Seamless Experience",
     description: "Access Stripe, PayPal, and more. We navigate the complexities to get your business approved, so you can accept payments from anyone, anywhere.",
   },
   {
-    icon: <Landmark className="h-8 w-8 text-primary" />,
-    title: "Business Bank Accounts",
+    icon: <Users className="h-8 w-8 text-white" />,
+    title: "Ongoing Partnership",
     description: "Open accounts with Mercury, Wise, and other leading platforms. Manage your international funds with ease and get a professional edge.",
   },
 ];
@@ -68,16 +68,17 @@ export default function Services() {
         >
           {services.map((service, index) => (
             <motion.div key={index} variants={itemVariants}>
-              <Card className="bg-card border border-border hover:border-primary/50 hover:bg-secondary/50 transition-all duration-300 transform hover:-translate-y-1 group h-full flex flex-col">
-                <CardHeader className="p-6">
-                  <div className="flex items-center gap-4">
-                      <div className="bg-primary/10 p-3 rounded-full border-2 border-primary/30 group-hover:border-primary/80 transition-colors">
-                        {service.icon}
-                      </div>
-                      <CardTitle className="font-headline text-xl">{service.title}</CardTitle>
-                  </div>
+              <Card className="bg-card border-border hover:border-primary/50 transition-all duration-300 transform hover:-translate-y-1 group h-full flex flex-col text-center">
+                <CardHeader className="p-6 pb-0">
+                    <div className="relative mx-auto mb-6 flex h-40 w-full items-center justify-center rounded-lg bg-dot-pattern [background-size:16px_16px]">
+                        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent"></div>
+                        <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary/90 shadow-lg">
+                           {service.icon}
+                        </div>
+                    </div>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 flex-grow">
+                <CardContent className="p-6 pt-0 flex-grow flex flex-col justify-center">
+                    <CardTitle className="font-headline text-2xl mb-2">{service.title}</CardTitle>
                     <CardDescription>
                       {service.description}
                     </CardDescription>
