@@ -4,6 +4,17 @@ import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
+const DiamondIcon = (props: React.SVGProps<SVGSVGElement>) => (
+  <svg 
+    viewBox="0 0 100 100" 
+    fill="currentColor"
+    xmlns="http://www.w3.org/2000/svg"
+    {...props}
+  >
+    <polygon points="50,0 100,50 50,100 0,50" />
+  </svg>
+)
+
 export default function Hero() {
   const containerVariants = {
     hidden: { opacity: 0 },
@@ -36,31 +47,37 @@ export default function Hero() {
       >
         <div className="grid gap-6">
           <div className="flex flex-col justify-center items-center space-y-6 text-center">
-            <motion.span 
-              className="text-sm font-semibold uppercase tracking-wider text-primary"
+             <motion.div 
+              className="inline-flex items-center rounded-full bg-card px-3 py-1 text-sm font-medium border border-border"
               variants={itemVariants}
-            >
-              Your Global Business Partner
-            </motion.span>
+             >
+                <span className="relative flex h-2 w-2 mr-2">
+                    <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                    <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                </span>
+                Empowering 100+ Bangladeshi Businesses
+            </motion.div>
+
             <motion.h1 
               className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-foreground"
               variants={itemVariants}
             >
-              Global Ambition. <br />
+              <span className="text-primary">Global Ambition.</span> <br />
+              Beyond <DiamondIcon className="inline-block w-8 h-8 md:w-12 md:h-12 -mb-1 md:-mb-2 text-foreground" /> Limits. <br />
               <span className="text-primary">Amplified By BizzFly.</span>
             </motion.h1>
             <motion.p 
               className="max-w-[700px] text-muted-foreground md:text-xl"
               variants={itemVariants}
             >
-             We empower Bangladeshi entrepreneurs to transcend borders. Form your international company, unlock global payment gateways, and operate your business worldwide—all from Bangladesh.
+             Design services at your fingertips. Pause or cancel anytime.
             </motion.p>
             <motion.div 
               className="flex flex-col gap-2 min-[400px]:flex-row mt-4"
               variants={itemVariants}
             >
-              <Button asChild size="lg" className="rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
-                <Link href="#contact">Get Started Now <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" /></Link>
+              <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 border-border hover:border-primary/50 hover:bg-secondary/50 group">
+                <Link href="#features">Learn More <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" /></Link>
               </Button>
             </motion.div>
           </div>
