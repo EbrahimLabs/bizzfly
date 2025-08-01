@@ -1,11 +1,19 @@
+"use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
+import { motion } from "framer-motion";
 
 export default function Cta() {
   return (
     <section id="contact" className="w-full py-16 md:py-24 lg:py-32">
-      <div className="container px-4 md:px-6">
+      <motion.div 
+        className="container px-4 md:px-6"
+        initial={{ opacity: 0, scale: 0.9 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: true, amount: 0.5 }}
+        transition={{ duration: 0.5 }}
+      >
         <div className="relative overflow-hidden rounded-2xl bg-card border p-8 md:p-12">
             <div className="absolute -top-10 -right-10 h-40 w-40 bg-primary/20 rounded-full blur-3xl" />
             <div className="absolute -bottom-10 -left-10 h-40 w-40 bg-primary/20 rounded-full blur-3xl" />
@@ -24,7 +32,7 @@ export default function Cta() {
                 </Button>
             </div>
         </div>
-      </div>
+      </motion.div>
     </section>
   );
 }

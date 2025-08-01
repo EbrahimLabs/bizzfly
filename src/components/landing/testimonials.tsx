@@ -1,6 +1,8 @@
+"use client";
 import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
+import { motion } from "framer-motion";
 
 const testimonials = [
   {
@@ -29,44 +31,76 @@ const testimonials = [
   },
 ];
 
+const containerVariants = {
+  hidden: { opacity: 0 },
+  visible: {
+    opacity: 1,
+    transition: {
+      staggerChildren: 0.2,
+    },
+  },
+};
+
+const itemVariants = {
+  hidden: { y: 20, opacity: 0 },
+  visible: {
+    y: 0,
+    opacity: 1,
+    transition: {
+      duration: 0.5,
+    },
+  },
+};
+
 export default function Testimonials() {
   return (
     <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-      <div className="container mx-auto px-4 md:px-6">
+      <motion.div 
+        className="container mx-auto px-4 md:px-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: true, amount: 0.2 }}
+        variants={containerVariants}
+      >
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <span className="text-sm font-semibold uppercase tracking-wider text-primary">Testimonials</span>
-            <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
+            <motion.span variants={itemVariants} className="text-sm font-semibold uppercase tracking-wider text-primary">Testimonials</motion.span>
+            <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
                 Trusted By Businesses Like Yours
-            </h2>
-            <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
+            </motion.h2>
+            <motion.p variants={itemVariants} className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
                 Real stories from businesses transformed by BizzFly.
-            </p>
+            </motion.p>
         </div>
-        <div className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12">
+        <motion.div 
+          className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12"
+          variants={containerVariants}
+        >
           {testimonials.map((testimonial, index) => (
-            <Card key={index} className="bg-card border-border flex flex-col">
-              <CardContent className="p-6 flex flex-col flex-grow">
-                <div className="flex mb-4">
-                    {[...Array(5)].map((_, i) => (
-                        <Star key={i} className="h-5 w-5 text-primary fill-primary" />
-                    ))}
-                </div>
-                <p className="text-muted-foreground mb-6 flex-grow">"{testimonial.text}"</p>
-                <div className="flex items-center gap-4 pt-4 border-t border-border/50">
-                  <Avatar className="h-12 w-12">
-                    <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
-                    <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <p className="font-semibold text-lg">{testimonial.name}</p>
-                    <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+            <motion.div key={index} variants={itemVariants}>
+              <Card className="bg-card border-border flex flex-col h-full">
+                <CardContent className="p-6 flex flex-col flex-grow">
+                  <div className="flex mb-4">
+                      {[...Array(5)].map((_, i) => (
+                          <Star key={i} className="h-5 w-5 text-primary fill-primary" />
+                      ))}
                   </div>
-                </div>
-              </CardContent>
-            </Card>
+                  <p className="text-muted-foreground mb-6 flex-grow">"{testimonial.text}"</p>
+                  <div className="flex items-center gap-4 pt-4 border-t border-border/50">
+                    <Avatar className="h-12 w-12">
+                      <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
+                      <AvatarFallback>{testimonial.avatar}</AvatarFallback>
+                    </Avatar>
+                    <div>
+                      <p className="font-semibold text-lg">{testimonial.name}</p>
+                      <p className="text-sm text-muted-foreground">{testimonial.title}</p>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            </motion.div>
           ))}
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 }
