@@ -43,6 +43,41 @@ const itemVariants = {
   },
 };
 
+const Particle = ({ delay }: { delay: number }) => {
+  const size = Math.random() * 1.5 + 0.5;
+  const x = Math.random() * 100;
+
+  return (
+    <motion.div
+      className="absolute bottom-0 bg-white/50 rounded-full"
+      style={{
+        width: size,
+        height: size,
+        left: `${x}%`,
+      }}
+      animate={{
+        y: '-200px',
+      }}
+      transition={{
+        delay,
+        duration: Math.random() * 2 + 3,
+        ease: "linear",
+        repeat: Infinity,
+        repeatType: 'loop',
+      }}
+    />
+  );
+};
+
+const ParticleBackground = () => (
+  <div className="absolute inset-0 overflow-hidden">
+    {Array.from({ length: 15 }).map((_, index) => (
+      <Particle key={index} delay={index * 0.35} />
+    ))}
+  </div>
+);
+
+
 export default function Services() {
   return (
     <section id="features" className="w-full py-12 md:py-24 lg:py-32">
@@ -77,7 +112,7 @@ export default function Services() {
                 <CardHeader className="p-4">
                   <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#111111] bg-grid p-4 flex items-center justify-center">
                       <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/80 to-transparent z-10"></div>
-                      <div className="absolute inset-0 bg-particle-pattern opacity-20"></div>
+                      <ParticleBackground />
                       <motion.div
                         className="relative z-20 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg"
                         animate={{
@@ -108,32 +143,3 @@ export default function Services() {
     </section>
   );
 }
-
-const partículas = Array.from({ length: 30 });
-
-const ParticleBackground = () => (
-    <div className="absolute inset-0 overflow-hidden">
-        {partículas.map((_, i) => (
-            <motion.div
-                key={i}
-                className="absolute bg-white rounded-full"
-                style={{
-                    height: Math.random() * 2 + 1,
-                    width: Math.random() * 2 + 1,
-                    left: `${Math.random() * 100}%`,
-                    top: `${Math.random() * 100}%`,
-                }}
-                animate={{
-                    x: (Math.random() - 0.5) * 20,
-                    y: (Math.random() - 0.5) * 20,
-                }}
-                transition={{
-                    duration: Math.random() * 5 + 5,
-                    repeat: Infinity,
-                    repeatType: "reverse",
-                    ease: "easeInOut"
-                }}
-            />
-        ))}
-    </div>
-)
