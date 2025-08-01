@@ -105,7 +105,7 @@ export default function Services() {
             <motion.div 
               key={index} 
               variants={itemVariants}
-              whileHover={{ scale: 1.05, y: -5 }}
+              whileHover={{ scale: 1.02, y: -2 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
               className="h-full"
             >
