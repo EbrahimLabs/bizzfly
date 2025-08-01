@@ -39,7 +39,7 @@ export default function Hero() {
 
   return (
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32">
-       <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-[radial-gradient(hsl(var(--foreground)_/_0.1)_1px,transparent_1px)] [background-size:16px_16px]"></div>
+       <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-particle-pattern [background-position:0_0]"></div>
       <motion.div 
         className="container mx-auto px-4 md:px-6"
         variants={containerVariants}
@@ -77,8 +77,10 @@ export default function Hero() {
               className="flex flex-col gap-2 min-[400px]:flex-row mt-4"
               variants={itemVariants}
             >
-              <Button asChild variant="outline" size="lg" className="rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 border-border hover:border-primary/50 hover:bg-secondary/50 group">
-                <Link href="#features">Learn More <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" /></Link>
+              <Button asChild size="lg" className="rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
+                  <Link href="#contact">
+                      Get Started <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
+                  </Link>
               </Button>
             </motion.div>
           </div>
