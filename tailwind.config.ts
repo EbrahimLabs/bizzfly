@@ -9,6 +9,12 @@ export default {
   ],
   theme: {
     extend: {
+      backgroundImage: {
+        'dot-pattern': "radial-gradient(hsl(var(--foreground) / 0.1) 1px, transparent 1px)",
+      },
+      backgroundSize: {
+        'dot-pattern': '16px 16px',
+      },
       fontFamily: {
         body: ['"Poppins"', 'sans-serif'],
         headline: ['"Poppins"', 'sans-serif'],

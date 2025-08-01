@@ -12,9 +12,8 @@ export default function Home() {
   return (
     <div className="flex min-h-dvh flex-col bg-background text-foreground">
       <div 
-        className="absolute top-0 left-0 w-full h-full -z-10"
+        className="absolute top-0 left-0 w-full h-full -z-10 bg-dot-pattern"
         style={{
-          backgroundImage: 'radial-gradient(circle, hsl(var(--foreground) / 0.05) 1px, transparent 1px)',
           backgroundSize: '16px 16px'
         }}
       />
