@@ -7,24 +7,24 @@ import {
 
 const faqs = [
   {
-    question: "Why do I need a US or UK company?",
-    answer: "A US or UK company provides international credibility, allows you to access global payment gateways like Stripe and PayPal, and opens doors to international business banking, which are often restricted for businesses based in Bangladesh.",
+    question: "What is Automatix?",
+    answer: "Automatix is a platform designed to help businesses automate their processes, from marketing and sales to operations and customer support, enabling them to scale efficiently.",
   },
   {
-    question: "Can I get a physical debit card for international payments?",
-    answer: "Yes, our business banking solution partners like Mercury, Wise, and Payoneer provide international debit cards (both virtual and physical) that you can use for online payments, such as running Facebook/Google ads or paying for SaaS subscriptions.",
+    question: "Who is Automatix for?",
+    answer: "Automatix is for startups, small to medium-sized businesses, and enterprises looking to streamline their workflows, reduce manual tasks, and drive growth through intelligent automation.",
   },
   {
-    question: "How long does the company formation process take?",
-    answer: "The timeline can vary, but we strive for a fast and hassle-free process. UK company formation is typically faster, often completed within a few days. US company formation, including obtaining an EIN, can take a few weeks. We guide you through every step to ensure it's as quick as possible.",
+    question: "What kind of support can I expect?",
+    answer: "We offer 24/7 customer support via chat and email. Our dedicated team is always ready to help you with any questions or issues you may encounter while using the platform.",
   },
   {
-    question: "What documents do I need to provide?",
-    answer: "Generally, you will need to provide a valid passport, proof of address, and some basic information about your business. We will provide you with a detailed checklist and guide you through the entire document collection process.",
+    question: "Can I integrate Automatix with my existing tools?",
+    answer: "Yes, Automatix offers a wide range of integrations with popular tools and platforms. You can connect your favorite apps to create seamless, automated workflows across your entire tech stack.",
   },
   {
-    question: "Do you provide support in Bangla?",
-    answer: "Yes! We offer personalized customer support in both English and Bangla to ensure clear communication and to better assist our Bangladeshi clients.",
+    question: "Is there a free trial available?",
+    answer: "Yes, we offer a 14-day free trial so you can explore all of Automatix's features and see how it can benefit your business. No credit card is required to sign up.",
   },
 ];
 
@@ -37,12 +37,12 @@ export default function Faq() {
                 Frequently Asked Questions
             </h2>
             <p className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Find answers to common questions about our services. Can't find what you're looking for? Contact us.
+                Your questions, answered.
             </p>
         </div>
-        <Accordion type="single" collapsible className="w-full mt-12">
+        <Accordion type="single" collapsible className="w-full mt-12 space-y-2">
           {faqs.map((faq, index) => (
-            <AccordionItem key={index} value={`item-${index}`} className="bg-card px-4 rounded-lg mb-2 shadow-sm hover:shadow-md transition-shadow">
+            <AccordionItem key={index} value={`item-${index}`} className="bg-secondary/30 border border-border rounded-lg px-6">
               <AccordionTrigger className="text-lg font-semibold text-left hover:no-underline">{faq.question}</AccordionTrigger>
               <AccordionContent className="text-base text-muted-foreground pb-4">
                 {faq.answer}

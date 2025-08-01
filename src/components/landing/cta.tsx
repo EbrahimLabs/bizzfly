@@ -1,19 +1,20 @@
-import ContactForm from "./contact-form";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 export default function Cta() {
   return (
-    <section id="contact" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-      <div className="container grid items-center justify-center gap-8 px-4 text-center md:px-6 lg:gap-12">
-        <div className="space-y-3">
-          <h2 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
-            Ready to Take Your Business Global?
+    <section id="contact" className="w-full py-16 md:py-24 lg:py-32">
+      <div className="container px-4 md:px-6">
+        <div className="mx-auto max-w-3xl text-center">
+          <h2 className="text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl font-headline">
+            Ready to Automate Your Success?
           </h2>
-          <p className="mx-auto max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-            Let's talk about your business goals. Fill out the form below or contact us directly to get a free consultation and get started.
+          <p className="mt-4 text-lg text-muted-foreground">
+            Join thousands of businesses scaling new heights with Automatix. Get started today.
           </p>
-        </div>
-        <div className="mx-auto w-full max-w-md">
-            <ContactForm />
+          <Button asChild size="lg" className="mt-8 rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground">
+            <Link href="#">Get Started for Free</Link>
+          </Button>
         </div>
       </div>
     </section>
