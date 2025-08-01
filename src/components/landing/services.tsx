@@ -109,7 +109,7 @@ export default function Services() {
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
               <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col">
-                <CardHeader className="p-4">
+                <CardHeader className="p-8">
                   <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#050505] bg-grid p-4 flex items-center justify-center">
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#050505)] z-10"></div>
                       <ParticleBackground />
