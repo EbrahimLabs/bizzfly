@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 
 const DiamondIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -36,6 +36,12 @@ export default function Hero() {
       },
     },
   };
+
+  const features = [
+      { text: "No hidden fees", icon: <CheckCircle2 className="h-5 w-5 text-primary" /> },
+      { text: "100% money-back guarantee", icon: <CheckCircle2 className="h-5 w-5 text-primary" /> },
+      { text: "Secure payments", icon: <CheckCircle2 className="h-5 w-5 text-primary" /> },
+  ]
 
   return (
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32">
@@ -80,6 +86,14 @@ export default function Hero() {
                       Get Started <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
                   </Link>
               </Button>
+            </motion.div>
+            <motion.div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-4" variants={itemVariants}>
+                {features.map((feature, index) => (
+                    <div key={index} className="flex items-center gap-2 text-muted-foreground">
+                        {feature.icon}
+                        <span>{feature.text}</span>
+                    </div>
+                ))}
             </motion.div>
           </div>
         </div>
