@@ -77,9 +77,20 @@ export default function Services() {
                 <CardHeader className="p-6 pb-0">
                     <div className="relative mx-auto mb-6 flex h-40 w-full items-center justify-center rounded-lg bg-dot-pattern [background-size:16px_16px]">
                         <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent"></div>
-                        <div className="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary/90 shadow-lg">
+                        <motion.div 
+                          className="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary/90 shadow-lg"
+                          animate={{
+                            y: [0, -10, 0],
+                          }}
+                          transition={{
+                            duration: 2,
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut"
+                          }}
+                        >
                            {service.icon}
-                        </div>
+                        </motion.div>
                     </div>
                 </CardHeader>
                 <CardContent className="p-6 pt-0 flex-grow flex flex-col justify-center">
