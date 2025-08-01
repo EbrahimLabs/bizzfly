@@ -73,29 +73,30 @@ export default function Services() {
               whileHover={{ scale: 1.05, y: -5 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
             >
-              <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col text-center">
-                <CardHeader className="p-6 pb-0">
-                    <div className="relative mx-auto mb-6 flex h-40 w-full items-center justify-center rounded-lg bg-dot-pattern">
-                        <div className="absolute inset-0 bg-gradient-to-t from-card via-card/80 to-transparent"></div>
-                        <motion.div 
-                          className="relative flex h-20 w-20 items-center justify-center rounded-full bg-primary shadow-lg"
-                          animate={{
-                            y: [0, -10, 0],
-                          }}
-                          transition={{
-                            duration: 2,
-                            repeat: Infinity,
-                            repeatType: "loop",
-                            ease: "easeInOut"
-                          }}
-                        >
-                           {service.icon}
-                        </motion.div>
-                    </div>
+              <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col">
+                <CardHeader className="p-4">
+                  <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#111111] bg-grid p-4 flex items-center justify-center">
+                      <div className="absolute inset-0 bg-gradient-to-t from-[#111111] via-[#111111]/80 to-transparent z-10"></div>
+                      <div className="absolute inset-0 bg-particle-pattern opacity-20"></div>
+                      <motion.div
+                        className="relative z-20 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg"
+                        animate={{
+                          y: [0, -8, 0],
+                        }}
+                        transition={{
+                          duration: 2.5,
+                          repeat: Infinity,
+                          repeatType: "loop",
+                          ease: "easeInOut"
+                        }}
+                      >
+                        {service.icon}
+                      </motion.div>
+                  </div>
                 </CardHeader>
-                <CardContent className="p-6 pt-0 flex-grow flex flex-col justify-center">
-                    <CardTitle className="font-headline text-2xl mb-2">{service.title}</CardTitle>
-                    <CardDescription>
+                <CardContent className="p-6 pt-2 flex-grow flex flex-col">
+                    <CardTitle className="font-headline text-2xl mb-2 text-left">{service.title}</CardTitle>
+                    <CardDescription className="text-left">
                       {service.description}
                     </CardDescription>
                 </CardContent>
@@ -107,3 +108,32 @@ export default function Services() {
     </section>
   );
 }
+
+const partículas = Array.from({ length: 30 });
+
+const ParticleBackground = () => (
+    <div className="absolute inset-0 overflow-hidden">
+        {partículas.map((_, i) => (
+            <motion.div
+                key={i}
+                className="absolute bg-white rounded-full"
+                style={{
+                    height: Math.random() * 2 + 1,
+                    width: Math.random() * 2 + 1,
+                    left: `${Math.random() * 100}%`,
+                    top: `${Math.random() * 100}%`,
+                }}
+                animate={{
+                    x: (Math.random() - 0.5) * 20,
+                    y: (Math.random() - 0.5) * 20,
+                }}
+                transition={{
+                    duration: Math.random() * 5 + 5,
+                    repeat: Infinity,
+                    repeatType: "reverse",
+                    ease: "easeInOut"
+                }}
+            />
+        ))}
+    </div>
+)

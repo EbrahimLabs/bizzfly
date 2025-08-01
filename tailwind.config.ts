@@ -10,10 +10,12 @@ export default {
   theme: {
     extend: {
       backgroundImage: {
-        'dot-pattern': "radial-gradient(hsl(var(--foreground)_/_0.1)_1px,transparent_1px)",
+        'grid': "linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)",
+        'particle-pattern': "radial-gradient(circle, rgba(255,255,255,0.3) 1px, transparent 1.5px)",
       },
       backgroundSize: {
-        'dot-pattern': '16px 16px',
+        'grid': '30px 30px',
+        'particle-pattern': '2rem 2rem'
       },
       fontFamily: {
         body: ['"Poppins"', 'sans-serif'],
