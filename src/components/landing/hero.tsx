@@ -78,7 +78,7 @@ export default function Hero() {
              We empower Bangladeshi entrepreneurs to break barriers, offering seamless US & UK company formation, international banking, and payment gateway solutions.
             </motion.p>
             <motion.div 
-              className="flex flex-col gap-2 min-[400px]:flex-row mt-4"
+              className="flex flex-col gap-2 min-[400px]:flex-row"
               variants={itemVariants}
             >
               <Button asChild size="lg" className="rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
@@ -87,7 +87,7 @@ export default function Hero() {
                   </Link>
               </Button>
             </motion.div>
-            <motion.div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 mt-4" variants={itemVariants}>
+            <motion.div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 pt-4" variants={itemVariants}>
                 {features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2 text-muted-foreground">
                         {feature.icon}
