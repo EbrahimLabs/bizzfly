@@ -46,7 +46,7 @@ const imageVariants = {
 
 export default function Usp() {
   return (
-    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-card">
+    <section id="about" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <motion.div 
         className="container mx-auto px-6"
         initial="hidden"
