@@ -21,7 +21,7 @@ export default function Hero() {
     visible: {
       opacity: 1,
       transition: {
-        staggerChildren: 0.2,
+        staggerChildren: 0.15,
       },
     },
   };
@@ -33,8 +33,34 @@ export default function Hero() {
       opacity: 1,
       transition: {
         duration: 0.5,
+        ease: "easeOut",
       },
     },
+  };
+
+  const headline = {
+    words: [
+      {
+        text: "Your",
+        className: "text-foreground",
+      },
+      {
+        text: "Gateway",
+        className: "text-foreground",
+      },
+      {
+        text: "to",
+        className: "text-foreground",
+      },
+      {
+        text: "Global",
+        className: "text-primary",
+      },
+      {
+        text: "Business.",
+        className: "text-primary",
+      },
+    ],
   };
 
   const features = [
@@ -44,8 +70,9 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32">
+    <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-particle-pattern [background-position:0_0]"></div>
+        <div className="absolute inset-0 -z-10 h-full w-full bg-radial-gradient from-background via-background to-transparent" />
       <motion.div 
         className="container mx-auto px-6"
         variants={containerVariants}
@@ -67,11 +94,23 @@ export default function Hero() {
 
             <motion.h1 
               className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl font-headline"
-              variants={itemVariants}
+              variants={containerVariants}
             >
-              <span className="text-foreground">Your Gateway to</span>
-              <br />
-              <span className="text-primary">Global Business.</span>
+              <span className="sr-only">Your Gateway to Global Business.</span>
+              <span className="block">
+                {headline.words.slice(0, 3).map((word, i) => (
+                  <motion.span key={i} className={`inline-block mr-3 lg:mr-5 ${word.className}`} variants={itemVariants}>
+                    {word.text}
+                  </motion.span>
+                ))}
+              </span>
+              <span className="block">
+                {headline.words.slice(3).map((word, i) => (
+                   <motion.span key={i} className={`inline-block mr-3 lg:mr-5 ${word.className}`} variants={itemVariants}>
+                    {word.text}
+                  </motion.span>
+                ))}
+              </span>
             </motion.h1>
             <motion.p 
               className="max-w-[700px] text-muted-foreground md:text-lg"
