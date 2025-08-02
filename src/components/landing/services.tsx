@@ -3,6 +3,7 @@ import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/com
 import { Globe, DollarSign, Landmark } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
+import { useIsMobile } from "@/hooks/use-mobile";
 
 const services = [
   {
@@ -49,15 +50,16 @@ const Particle = ({ delay }: { delay: number }) => {
   const [duration, setDuration] = useState(0);
 
   useEffect(() => {
+    // This code now runs only on the client
     const size = Math.random() * 1.5 + 0.5;
     const x = Math.random() * 100;
     setStyle({
-      width: size,
-      height: size,
+      width: `${size}px`,
+      height: `${size}px`,
       left: `${x}%`,
     });
     setDuration(Math.random() * 2 + 3);
-  }, []);
+  }, []); // Empty dependency array ensures this runs once on mount
 
   if (!duration) return null;
 
@@ -89,6 +91,7 @@ const ParticleBackground = () => (
 
 
 export default function Services() {
+  const isMobile = useIsMobile();
   return (
     <section id="features" className="w-full py-12 md:py-24 lg:py-32">
       <motion.div 
@@ -115,13 +118,13 @@ export default function Services() {
             <motion.div 
               key={index} 
               variants={itemVariants}
-              whileHover={{ scale: 1.02, y: -2 }}
+              whileHover={isMobile ? {} : { scale: 1.02, y: -2 }}
               transition={{ type: "spring", stiffness: 300, damping: 10 }}
               className="h-full"
             >
               <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col bg-gradient-to-b from-white/5 to-transparent">
                 <CardHeader className="p-8">
-                  <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#050505] bg-grid p-4 flex items-center justify-center">
+                  <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#050505] p-4 flex items-center justify-center">
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#050505)] z-10"></div>
                       <ParticleBackground />
                       <motion.div
