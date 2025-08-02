@@ -21,7 +21,7 @@ export default {
         'grid-pattern': "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 50%), linear-gradient(to right, hsl(var(--border) / 0.1) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--border) / 0.1) 1px, transparent 1px)",
       },
       backgroundSize: {
-        'grid': '1.5rem 1.5rem',
+        'grid': '2rem 2rem',
         'grid-pattern': '100% 1.5rem, 1.5rem 1.5rem, 1.5rem 1.5rem',
       },
       fontFamily: {
@@ -109,6 +109,14 @@ export default {
         'tilt': {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(3deg)' },
+        },
+        "shiny-spin": {
+          "0%": {
+            transform: "rotate(0deg)",
+          },
+          "100%": {
+            transform: "rotate(360deg)",
+          },
         }
       },
       animation: {
@@ -116,6 +124,7 @@ export default {
         'accordion-up': 'accordion-up 0.2s ease-out',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'tilt': 'tilt 10s linear infinite',
+        'shiny-spin': 'shiny-spin 5s linear infinite',
       },
     },
   },
