@@ -17,9 +17,9 @@ const UKFlag = () => (
 
 const EmpoweredCard = () => (
     <motion.div
-        className="hidden lg:flex absolute top-40 -left-20 w-64"
+        className="hidden lg:flex absolute top-20 -left-20 w-72 -rotate-3"
         initial={{ opacity: 0, x: -50, rotate: -5 }}
-        animate={{ opacity: 1, x: 0, rotate: 0 }}
+        animate={{ opacity: 1, x: 0, rotate: -3 }}
         transition={{ delay: 1, duration: 0.5, type: "spring", stiffness: 100 }}
     >
         <div className="bg-card/80 backdrop-blur-lg border border-border/30 rounded-2xl p-4 shadow-xl w-full">
@@ -57,9 +57,9 @@ const EmpoweredCard = () => (
 
 const FormationCard = () => (
     <motion.div
-        className="hidden lg:flex absolute top-40 -right-20 w-64"
+        className="hidden lg:flex absolute top-20 -right-20 w-72 rotate-3"
         initial={{ opacity: 0, x: 50, rotate: 5 }}
-        animate={{ opacity: 1, x: 0, rotate: 0 }}
+        animate={{ opacity: 1, x: 0, rotate: 3 }}
         transition={{ delay: 1.2, duration: 0.5, type: "spring", stiffness: 100 }}
     >
         <div className="bg-card/80 backdrop-blur-lg border border-border/30 rounded-2xl p-4 shadow-xl w-full flex flex-col gap-4">
@@ -217,3 +217,4 @@ export default function Hero() {
     
 
     
+
