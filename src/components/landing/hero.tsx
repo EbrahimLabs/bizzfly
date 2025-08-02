@@ -71,8 +71,6 @@ export default function Hero() {
 
   return (
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
-       <div className="absolute inset-0 -z-20 h-full w-full bg-background bg-grid [background-position:0_0]"></div>
-       <div className="absolute inset-0 -z-10 h-full w-full bg-gradient-to-b from-background via-background/80 to-background"></div>
       <motion.div 
         className="container mx-auto px-6"
         variants={containerVariants}
