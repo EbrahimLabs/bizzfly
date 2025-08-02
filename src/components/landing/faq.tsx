@@ -55,7 +55,7 @@ export default function Faq() {
   return (
     <section id="faq" className="w-full py-12 md:py-24 lg:py-32">
       <motion.div 
-        className="container mx-auto max-w-4xl px-4 md:px-6"
+        className="container mx-auto max-w-4xl px-[5vw] md:px-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}

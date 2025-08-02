@@ -17,7 +17,7 @@ const BizzFlyLogo = () => (
 export default function Footer() {
   return (
     <footer className="bg-background border-t border-border/50 py-8">
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-[5vw] md:px-6">
         <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
           <div className="space-y-4">
             <BizzFlyLogo />

@@ -28,7 +28,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-full max-w-5xl px-4">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[90vw] max-w-5xl md:w-full md:px-4">
       <motion.div 
         className="bg-card/60 backdrop-blur-lg rounded-full border border-border/30 shadow-lg"
         initial={{ y: -100, opacity: 0 }}

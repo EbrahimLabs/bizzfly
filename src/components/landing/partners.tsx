@@ -8,7 +8,7 @@ export default function Partners() {
     return (
         <section className="py-8 md:py-12 lg:py-16">
             <motion.div 
-                className="container mx-auto px-4 md:px-6"
+                className="container mx-auto px-[5vw] md:px-6"
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true, amount: 0.5 }}
