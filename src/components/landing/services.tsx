@@ -144,7 +144,7 @@ export default function Services() {
                       <ParticleBackground />
                       <div
                         className="relative z-20 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 backdrop-blur-sm
-                        before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-primary/20 before:to-orange-400/20 before:blur-lg"
+                        before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-primary/20 before:to-primary/20 before:blur-lg"
                       >
                         {service.icon}
                       </div>
