@@ -7,17 +7,17 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const services = [
   {
-    icon: <Globe className="h-8 w-8 text-white" />,
+    icon: <Globe className="h-6 w-6 text-white" />,
     title: "US/UK Company Formation",
     description: "Establish your business identity in the world's leading markets. We handle everything from registration to compliance, giving you a credible global presence.",
   },
   {
-    icon: <DollarSign className="h-8 w-8 text-white" />,
+    icon: <DollarSign className="h-6 w-6 text-white" />,
     title: "Payment Gateway Setup",
     description: "Access Stripe, PayPal, and more. We navigate the complexities to get your business approved, so you can accept payments from anyone, anywhere.",
   },
   {
-    icon: <Landmark className="h-8 w-8 text-white" />,
+    icon: <Landmark className="h-6 w-6 text-white" />,
     title: "Business Bank Accounts",
     description: "Open accounts with Mercury, Wise, and other leading platforms. Manage your international funds with ease and get a professional edge.",
   },
@@ -128,7 +128,7 @@ export default function Services() {
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#050505)] z-10"></div>
                       <ParticleBackground />
                       <motion.div
-                        className="relative z-20 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg"
+                        className="relative z-20 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg"
                         animate={{
                           y: [0, -8, 0],
                         }}
