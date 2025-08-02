@@ -5,6 +5,7 @@ import Link from "next/link";
 import { ArrowRight, CheckCircle, Users, TrendingUp, CalendarDays, LineChart } from "lucide-react";
 import { motion } from "framer-motion";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+import { useState, useEffect } from "react";
 
 const USFlag = () => (
   <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 rounded-sm" viewBox="0 0 7410 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"/><path fill="#fff" d="M0 450h7410v300H0zm0 600h7410v300H0zm0 600h7410v300H0zm0 600h7410v300H0zm0 600h7410v300H0z"/><path fill="#3c3b6e" d="M0 0h2964v2100H0z"/><path fill="#fff" d="m148.2 175 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zM444.6 175l45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zM741 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1037.4 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1333.8 175l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1630.2 175l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1926.6 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM2223 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM2519.4 175l45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zM2815.8 175l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9z"/></svg>
@@ -83,6 +84,52 @@ const FormationCard = () => (
     </motion.div>
 );
 
+const Particle = ({ delay }: { delay: number }) => {
+  const [style, setStyle] = useState({});
+  const [duration, setDuration] = useState(0);
+
+  useEffect(() => {
+    // This code now runs only on the client
+    const size = Math.random() * 2 + 1;
+    const x = Math.random() * 100;
+    const y = Math.random() * 100;
+    setStyle({
+      width: `${size}px`,
+      height: `${size}px`,
+      left: `${x}%`,
+      top: `${y}%`,
+    });
+    setDuration(Math.random() * 3 + 2); // 2 to 5 seconds
+  }, []); // Empty dependency array ensures this runs once on mount
+
+  if (!duration) return null;
+
+  return (
+    <motion.div
+      className="absolute bg-white/70 rounded-full"
+      style={style}
+      animate={{
+        opacity: [0, 1, 0], // Twinkle effect
+      }}
+      transition={{
+        delay,
+        duration,
+        ease: "easeInOut",
+        repeat: Infinity,
+        repeatType: 'loop',
+      }}
+    />
+  );
+};
+
+const HeroParticleBackground = () => (
+  <div className="absolute inset-0 overflow-hidden pointer-events-none">
+    {Array.from({ length: 50 }).map((_, index) => (
+      <Particle key={index} delay={index * 0.15} />
+    ))}
+  </div>
+);
+
 
 export default function Hero() {
   const containerVariants = {
@@ -141,6 +188,7 @@ export default function Hero() {
 
   return (
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-grid">
+      <HeroParticleBackground />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background to-80%"></div>
       <div className="container mx-auto px-6 relative z-10">
         <div className="relative">
