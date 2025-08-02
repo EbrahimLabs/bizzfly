@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight, CheckCircle } from "lucide-react";
 import { motion } from "framer-motion";
 import Partners from "./partners";
 
@@ -120,7 +120,7 @@ export default function Hero() {
           <motion.div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-4" variants={itemVariants}>
               {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle2 className="h-4 w-4 text-primary" />
+                      <CheckCircle className="h-4 w-4 text-primary" />
                       <span>{feature.text}</span>
                   </div>
               ))}
