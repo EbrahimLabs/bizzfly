@@ -64,7 +64,7 @@ export default function Testimonials() {
       >
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
             <motion.span variants={itemVariants} className="text-sm font-semibold uppercase tracking-wider text-primary">Testimonials</motion.span>
-            <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
+            <motion.h2 variants={itemVariants} className="text-3xl font-bold sm:text-5xl font-headline">
                 Trusted By Businesses Like Yours
             </motion.h2>
             <motion.p variants={itemVariants} className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">

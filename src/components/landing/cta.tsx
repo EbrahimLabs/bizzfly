@@ -19,7 +19,7 @@ export default function Cta() {
             <div className="absolute -bottom-10 -left-10 h-40 w-40 bg-primary/20 rounded-full blur-3xl" />
             <div className="relative z-10 mx-auto max-w-3xl text-center">
                 <span className="text-sm font-semibold uppercase tracking-wider text-primary">Let's Talk</span>
-                <h2 className="mt-2 text-3xl font-extrabold tracking-tight sm:text-4xl md:text-5xl font-headline">
+                <h2 className="mt-2 text-3xl font-extrabold sm:text-4xl md:text-5xl font-headline">
                     Let's Turn Your Dream Into Reality
                 </h2>
                 <p className="mt-4 text-lg text-muted-foreground">

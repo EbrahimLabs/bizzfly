@@ -66,7 +66,7 @@ export default function Hero() {
             </motion.div>
 
             <motion.h1 
-              className="text-4xl font-semibold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline"
+              className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl font-headline"
               variants={itemVariants}
             >
               <span className="text-foreground">Your Gateway to</span>

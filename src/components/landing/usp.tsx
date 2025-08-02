@@ -67,7 +67,7 @@ export default function Usp() {
           </motion.div>
           <motion.div className="space-y-6" variants={containerVariants}>
             <motion.span variants={itemVariants} className="text-sm font-semibold uppercase tracking-wider text-primary">Why BizzFly</motion.span>
-            <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl font-headline">
+            <motion.h2 variants={itemVariants} className="text-3xl font-bold sm:text-4xl md:text-5xl font-headline">
               We Drive Businesses To The Forefront
             </motion.h2>
             <motion.p variants={itemVariants} className="max-w-[600px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">

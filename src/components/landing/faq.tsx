@@ -63,7 +63,7 @@ export default function Faq() {
       >
         <div className="flex flex-col items-center justify-center space-y-4 text-center">
           <motion.span variants={itemVariants} className="text-sm font-semibold uppercase tracking-wider text-primary">FAQ</motion.span>
-            <motion.h2 variants={itemVariants} className="text-3xl font-bold tracking-tighter sm:text-5xl font-headline">
+            <motion.h2 variants={itemVariants} className="text-3xl font-bold sm:text-5xl font-headline">
                 Frequently Asked Questions
             </motion.h2>
         </div>
