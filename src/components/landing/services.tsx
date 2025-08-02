@@ -143,9 +143,8 @@ export default function Services() {
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#050505)] z-10"></div>
                       <ParticleBackground />
                       <div
-                        className="relative z-20 flex h-20 w-20 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg 
-                        before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-primary/50 before:to-orange-400/50 before:blur-lg before:-z-10
-                        after:absolute after:inset-px after:rounded-full after:bg-card after:opacity-50"
+                        className="relative z-20 flex h-20 w-20 items-center justify-center rounded-full bg-primary/10 backdrop-blur-sm
+                        before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-primary/20 before:to-orange-400/20 before:blur-lg"
                       >
                         {service.icon}
                       </div>
