@@ -7,17 +7,17 @@ import { useIsMobile } from "@/hooks/use-mobile";
 
 const services = [
   {
-    icon: <Globe className="h-6 w-6 text-white" />,
+    icon: <Globe className="h-5 w-5 text-white" />,
     title: "US/UK Company Formation",
     description: "Establish your business identity in the world's leading markets. We handle everything from registration to compliance, giving you a credible global presence.",
   },
   {
-    icon: <DollarSign className="h-6 w-6 text-white" />,
+    icon: <DollarSign className="h-5 w-5 text-white" />,
     title: "Payment Gateway Setup",
     description: "Access Stripe, PayPal, and more. We navigate the complexities to get your business approved, so you can accept payments from anyone, anywhere.",
   },
   {
-    icon: <Landmark className="h-6 w-6 text-white" />,
+    icon: <Landmark className="h-5 w-5 text-white" />,
     title: "Business Bank Accounts",
     description: "Open accounts with Mercury, Wise, and other leading platforms. Manage your international funds with ease and get a professional edge.",
   },
@@ -125,10 +125,10 @@ export default function Services() {
               <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col bg-gradient-to-b from-white/5 to-transparent">
                 <CardHeader className="p-8">
                   <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#050505] p-4 flex items-center justify-center bg-grid [background-size:2rem_2rem]">
-                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#050505)] z-10"></div>
+                      <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_50%,#050505)] z-10"></div>
                       <ParticleBackground />
                       <motion.div
-                        className="relative z-20 flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg"
+                        className="relative z-20 flex h-12 w-12 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg"
                         animate={{
                           y: [0, -8, 0],
                         }}
