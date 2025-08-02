@@ -1,20 +1,9 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, CheckCircle2 } from "lucide-react";
 import { motion } from "framer-motion";
 import Partners from "./partners";
-
-const DiamondIcon = (props: React.SVGProps<SVGSVGElement>) => (
-  <svg 
-    viewBox="0 0 100 100" 
-    fill="currentColor"
-    xmlns="http://www.w3.org/2000/svg"
-    {...props}
-  >
-    <polygon points="50,0 100,50 50,100 0,50" />
-  </svg>
-)
 
 export default function Hero() {
   const containerVariants = {
@@ -131,7 +120,7 @@ export default function Hero() {
           <motion.div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-4" variants={itemVariants}>
               {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <DiamondIcon className="h-3 w-3 text-primary" />
+                      <CheckCircle2 className="h-4 w-4 text-primary" />
                       <span>{feature.text}</span>
                   </div>
               ))}
