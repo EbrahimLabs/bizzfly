@@ -60,6 +60,12 @@
   }
 }
 
+@layer components {
+  .service-icon-bg {
+    background-image: radial-gradient(ellipse at center, hsl(var(--accent)), hsl(var(--accent_dark)));
+  }
+}
+
 @layer utilities {
     @keyframes orbit {
         0% {
