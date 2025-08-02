@@ -73,9 +73,8 @@ export default function Hero() {
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden">
        <div 
         className="absolute inset-0 -z-10 h-full w-full bg-particle-pattern [background-position:0_0]"
-        style={{ backgroundImage: 'radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1.5px), linear-gradient(to bottom, transparent, hsl(var(--background)))' }}
        >
-         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/80 to-transparent"></div>
+         <div className="absolute inset-0 bg-gradient-to-t from-background via-background/90 to-transparent"></div>
        </div>
       <motion.div 
         className="container mx-auto px-6"
