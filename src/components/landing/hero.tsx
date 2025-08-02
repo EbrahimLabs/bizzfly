@@ -17,7 +17,7 @@ const UKFlag = () => (
 
 const EmpoweredCard = () => (
     <motion.div
-        className="hidden lg:flex absolute top-20 -left-12 w-64"
+        className="hidden lg:flex absolute top-40 -left-20 w-64"
         initial={{ opacity: 0, x: -50, rotate: -5 }}
         animate={{ opacity: 1, x: 0, rotate: 0 }}
         transition={{ delay: 1, duration: 0.5, type: "spring", stiffness: 100 }}
@@ -57,7 +57,7 @@ const EmpoweredCard = () => (
 
 const FormationCard = () => (
     <motion.div
-        className="hidden lg:flex absolute bottom-20 -right-12 w-64"
+        className="hidden lg:flex absolute top-40 -right-20 w-64"
         initial={{ opacity: 0, x: 50, rotate: 5 }}
         animate={{ opacity: 1, x: 0, rotate: 0 }}
         transition={{ delay: 1.2, duration: 0.5, type: "spring", stiffness: 100 }}
