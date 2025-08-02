@@ -74,7 +74,7 @@ export default function Hero() {
   return (
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-grid">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background to-80%"></div>
-      <div className="container mx-auto px-6">
+      <div className="container mx-auto px-6 relative z-10">
         <motion.div
           className="flex flex-col justify-center items-center space-y-6 text-center"
           variants={containerVariants}
