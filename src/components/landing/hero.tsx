@@ -1,7 +1,7 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, CheckCircle2 } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 
 const DiamondIcon = (props: React.SVGProps<SVGSVGElement>) => (
@@ -38,9 +38,9 @@ export default function Hero() {
   };
 
   const features = [
-      { text: "No hidden fees", icon: <CheckCircle2 className="h-5 w-5 text-primary" /> },
-      { text: "100% money-back guarantee", icon: <CheckCircle2 className="h-5 w-5 text-primary" /> },
-      { text: "Secure payments", icon: <CheckCircle2 className="h-5 w-5 text-primary" /> },
+      { text: "No hidden fees" },
+      { text: "100% money-back guarantee" },
+      { text: "Secure payments" },
   ]
 
   return (
@@ -66,10 +66,12 @@ export default function Hero() {
             </motion.div>
 
             <motion.h1 
-              className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline text-foreground"
+              className="text-4xl font-extrabold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline"
               variants={itemVariants}
             >
-              Your <span className="text-primary">Gateway</span> to <br /> Global Business.
+              <span className="text-primary">Your Gateway</span>
+              <br />
+              <span className="text-foreground">to Global Business.</span>
             </motion.h1>
             <motion.p 
               className="max-w-[700px] text-muted-foreground md:text-xl"
@@ -81,16 +83,16 @@ export default function Hero() {
               className="flex flex-col gap-2 min-[400px]:flex-row"
               variants={itemVariants}
             >
-              <Button asChild size="lg" className="rounded-full px-8 text-lg font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
+              <Button asChild size="lg" className="rounded-md px-6 text-base font-semibold transition-transform hover:scale-105 bg-secondary hover:bg-secondary/80 border border-border text-secondary-foreground group">
                   <Link href="#contact">
-                      Get Started <ArrowRight className="h-5 w-5 ml-2 transition-transform group-hover:translate-x-1" />
+                      Get Started <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Link>
               </Button>
             </motion.div>
-            <motion.div className="flex flex-wrap items-center justify-center gap-x-8 gap-y-2 pt-4" variants={itemVariants}>
+            <motion.div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-4" variants={itemVariants}>
                 {features.map((feature, index) => (
                     <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                        {feature.icon}
+                        <DiamondIcon className="h-3 w-3 text-primary" />
                         <span>{feature.text}</span>
                     </div>
                 ))}
