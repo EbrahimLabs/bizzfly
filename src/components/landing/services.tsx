@@ -1,25 +1,30 @@
 "use client";
 import { Card, CardHeader, CardTitle, CardDescription, CardContent } from "@/components/ui/card";
-import { Globe, DollarSign, Landmark } from "lucide-react";
+import { Globe, DollarSign, Landmark, FileText } from "lucide-react";
 import { motion } from "framer-motion";
 import { useState, useEffect } from "react";
 import { useIsMobile } from "@/hooks/use-mobile";
 
 const services = [
   {
-    icon: <Globe className="h-5 w-5 text-white" />,
+    icon: <Globe className="h-6 w-6 text-white" />,
     title: "US/UK Company Formation",
     description: "Establish your business identity in the world's leading markets. We handle everything from registration to compliance, giving you a credible global presence.",
   },
   {
-    icon: <DollarSign className="h-5 w-5 text-white" />,
+    icon: <DollarSign className="h-6 w-6 text-white" />,
     title: "Payment Gateway Setup",
     description: "Access Stripe, PayPal, and more. We navigate the complexities to get your business approved, so you can accept payments from anyone, anywhere.",
   },
   {
-    icon: <Landmark className="h-5 w-5 text-white" />,
+    icon: <Landmark className="h-6 w-6 text-white" />,
     title: "Business Bank Accounts",
     description: "Open accounts with Mercury, Wise, and other leading platforms. Manage your international funds with ease and get a professional edge.",
+  },
+  {
+    icon: <FileText className="h-6 w-6 text-white" />,
+    title: "Tax & Compliance",
+    description: "Navigate US and UK tax laws with our expert support. We ensure you meet all your filing obligations, so you can focus on growing your business.",
   },
 ];
 
@@ -111,7 +116,7 @@ export default function Services() {
           </motion.p>
         </div>
         <motion.div 
-          className="mx-auto grid items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-3 mt-12"
+          className="mx-auto grid items-start gap-8 sm:grid-cols-2 md:gap-12 lg:grid-cols-2 xl:grid-cols-4 mt-12"
           variants={containerVariants}
         >
           {services.map((service, index) => (
@@ -123,27 +128,33 @@ export default function Services() {
               className="h-full"
             >
               <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col bg-gradient-to-b from-white/5 to-transparent">
-                <CardHeader className="p-8">
+                <CardHeader className="p-6">
                   <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#050505] p-4 flex items-center justify-center bg-grid">
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_20%,#050505)] z-10"></div>
                       <ParticleBackground />
-                      <motion.div
-                        className="relative z-20 flex h-10 w-10 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg"
-                        animate={{
-                          y: [0, -8, 0],
-                        }}
-                        transition={{
-                          duration: 2.5,
-                          repeat: Infinity,
-                          repeatType: "loop",
-                          ease: "easeInOut"
-                        }}
+                      <div
+                        className="relative z-20 flex h-14 w-14 items-center justify-center rounded-full bg-gradient-to-br from-primary to-orange-400 shadow-lg 
+                        before:absolute before:inset-0 before:rounded-full before:bg-gradient-to-br before:from-primary/50 before:to-orange-400/50 before:blur-lg before:-z-10
+                        after:absolute after:inset-px after:rounded-full after:bg-card after:opacity-50"
                       >
-                        {service.icon}
-                      </motion.div>
+                         <motion.div
+                          animate={{
+                            y: [0, -4, 0],
+                          }}
+                          transition={{
+                            duration: 2.5,
+                            repeat: Infinity,
+                            repeatType: "loop",
+                            ease: "easeInOut",
+                            delay: index * 0.2,
+                          }}
+                        >
+                          {service.icon}
+                        </motion.div>
+                      </div>
                   </div>
                 </CardHeader>
-                <CardContent className="p-8 pt-4 flex-grow flex flex-col">
+                <CardContent className="p-6 pt-0 flex-grow flex flex-col">
                     <CardTitle className="font-headline text-2xl mb-2 text-left">{service.title}</CardTitle>
                     <CardDescription className="text-left">
                       {service.description}
