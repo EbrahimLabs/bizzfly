@@ -2,9 +2,18 @@
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, CheckCircle, Users, TrendingUp } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, TrendingUp, CalendarDays, LineChart } from "lucide-react";
 import { motion } from "framer-motion";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+const USFlag = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 rounded-sm" viewBox="0 0 7410 3900"><path fill="#b22234" d="M0 0h7410v3900H0z"/><path fill="#fff" d="M0 450h7410v300H0zm0 600h7410v300H0zm0 600h7410v300H0zm0 600h7410v300H0zm0 600h7410v300H0z"/><path fill="#3c3b6e" d="M0 0h2964v2100H0z"/><path fill="#fff" d="m148.2 175 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.39-140.71 45.4 140.71-118.84-87.02h146.9zM444.6 175l45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zM741 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1037.4 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1333.8 175l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1630.2 175l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM1926.6 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM2223 350l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zM2519.4 175l45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.39 140.71-118.84-87.02h146.9zM2815.8 175l45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9zm0 350 45.4-140.71 45.4 140.71-118.84-87.02h146.9z"/></svg>
+);
+
+const UKFlag = () => (
+  <svg xmlns="http://www.w3.org/2000/svg" className="h-5 w-5 rounded-sm" viewBox="0 0 1200 600"><path fill="#012169" d="M0 0h1200v600H0z"/><path fill="#FFF" d="m50 0 400 200-400 200V0zm700 0 400 200-400 200V0zM0 50l600 200-600 200V50zm1200 0L600 250l600 200V50z"/><path fill="none" stroke="#FFF" strokeWidth="60" d="M0 0L600 300M1200 0L600 300"/><path fill="none" stroke="#C8102E" strokeWidth="40" d="M0 0L600 300M1200 0L600 300"/><path fill="none" stroke="#FFF" strokeWidth="100" d="M0 200h1200M0 400h1200M400 0v600M800 0v600"/><path fill="none" stroke="#C8102E" strokeWidth="60" d="M0 200h1200M0 400h1200M400 0v600M800 0v600"/></svg>
+);
+
 
 const EmpoweredCard = () => (
     <motion.div
@@ -20,7 +29,7 @@ const EmpoweredCard = () => (
                 </div>
                 <p className="font-semibold text-foreground">Businesses Empowered</p>
             </div>
-            <p className="text-3xl font-bold text-foreground my-3">100+</p>
+            <p className="text-3xl font-bold text-foreground my-2">100+</p>
             <div className="flex items-center">
                 <div className="flex -space-x-2">
                     <Avatar className="h-6 w-6 border-2 border-card">
@@ -38,26 +47,38 @@ const EmpoweredCard = () => (
                 </div>
                 <p className="text-xs text-muted-foreground ml-2">+97 more</p>
             </div>
+            <div className="flex items-center gap-2 mt-3 text-xs text-muted-foreground">
+              <LineChart className="h-4 w-4 text-green-500" />
+              <span>15% growth this month</span>
+            </div>
         </div>
     </motion.div>
 );
 
-const PayoutsCard = () => (
+const FormationCard = () => (
     <motion.div
-        className="hidden lg:flex absolute bottom-20 -right-16 w-60"
+        className="hidden lg:flex absolute bottom-20 -right-16 w-64"
         initial={{ opacity: 0, x: 50, rotate: 5 }}
         animate={{ opacity: 1, x: 0, rotate: 0 }}
         transition={{ delay: 1.2, duration: 0.5, type: "spring", stiffness: 100 }}
     >
-        <div className="bg-card/80 backdrop-blur-lg border border-border/30 rounded-2xl p-4 shadow-xl w-full">
-             <div className="flex items-center justify-between mb-2">
-                <p className="font-semibold text-foreground">Global Payouts</p>
-                <div className="bg-primary/20 text-primary p-1.5 rounded-full">
-                    <TrendingUp className="h-4 w-4" />
+        <div className="bg-card/80 backdrop-blur-lg border border-border/30 rounded-2xl p-4 shadow-xl w-full flex flex-col gap-4">
+            <div>
+              <div className="flex items-center gap-3 mb-2">
+                  <div className="bg-primary/20 text-primary p-2 rounded-full">
+                      <CalendarDays className="h-5 w-5" />
+                  </div>
+                  <p className="font-semibold text-foreground">Company Formation</p>
+              </div>
+              <p className="text-3xl font-bold text-foreground">Under 7 Days</p>
+            </div>
+            <div className="border-t border-border/50 pt-3">
+                <p className="text-xs font-semibold text-muted-foreground mb-2">US & UK Incorporation</p>
+                <div className="flex items-center gap-2">
+                    <USFlag />
+                    <UKFlag />
                 </div>
             </div>
-            <p className="text-3xl font-bold text-foreground">$1.2M+</p>
-            <p className="text-xs text-muted-foreground mt-1">Processed for our clients</p>
         </div>
     </motion.div>
 );
@@ -124,8 +145,8 @@ export default function Hero() {
       <div className="container mx-auto px-6 relative z-10">
         <div className="relative">
             <EmpoweredCard />
-            <PayoutsCard />
-            <motion.div
+            <FormationCard />
+            <motion.div 
               className="flex flex-col justify-center items-center space-y-6 text-center"
               variants={containerVariants}
               initial="hidden"
@@ -192,3 +213,5 @@ export default function Hero() {
     </section>
   );
 }
+
+    
