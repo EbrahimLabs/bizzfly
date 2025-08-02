@@ -1,6 +1,5 @@
 import Header from '@/components/landing/header';
 import Hero from '@/components/landing/hero';
-import Partners from '@/components/landing/partners';
 import Services from '@/components/landing/services';
 import Usp from '@/components/landing/usp';
 import Testimonials from '@/components/landing/testimonials';
@@ -14,7 +13,6 @@ export default function Home() {
       <Header />
       <main className="flex-1">
         <Hero />
-        <Partners />
         <Services />
         <Usp />
         <Testimonials />

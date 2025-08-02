@@ -3,6 +3,7 @@ import { Button } from "@/components/ui/button";
 import Link from "next/link";
 import { ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
+import Partners from "./partners";
 
 const DiamondIcon = (props: React.SVGProps<SVGSVGElement>) => (
   <svg 
@@ -80,6 +81,7 @@ export default function Hero() {
                   variants={containerVariants}
                   initial="hidden"
                   animate="visible"
+                  className="flex flex-col gap-12"
                 >
                   <div className="flex flex-col justify-center items-center space-y-6 text-center">
                     <motion.div 
@@ -138,6 +140,7 @@ export default function Hero() {
                         ))}
                     </motion.div>
                   </div>
+                  <Partners />
                 </motion.div>
             </div>
         </div>
