@@ -26,8 +26,8 @@ export default {
         'particle-pattern': '2rem 2rem'
       },
       fontFamily: {
-        body: ['"Poppins"', 'sans-serif'],
-        headline: ['"Poppins"', 'sans-serif'],
+        body: ['"Inter"', 'sans-serif'],
+        headline: ['"Urbanist"', 'sans-serif'],
       },
       colors: {
         background: 'hsl(var(--background))',
