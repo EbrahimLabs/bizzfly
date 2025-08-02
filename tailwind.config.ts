@@ -16,6 +16,9 @@ export default {
       },
     },
     extend: {
+      backgroundImage: {
+        'grid': 'linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)',
+      },
       backgroundSize: {
         'grid': '2rem 2rem',
       },
