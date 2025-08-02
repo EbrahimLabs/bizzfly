@@ -47,7 +47,7 @@ export default function Hero() {
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32">
        <div className="absolute inset-0 -z-10 h-full w-full bg-background bg-particle-pattern [background-position:0_0]"></div>
       <motion.div 
-        className="container mx-auto px-[5vw] md:px-6"
+        className="container mx-auto px-6"
         variants={containerVariants}
         initial="hidden"
         animate="visible"

@@ -8,7 +8,7 @@ export default function Cta() {
   return (
     <section id="contact" className="w-full py-16 md:py-24 lg:py-32">
       <motion.div 
-        className="container px-[5vw] md:px-6"
+        className="container px-6"
         initial={{ opacity: 0, scale: 0.9 }}
         whileInView={{ opacity: 1, scale: 1 }}
         viewport={{ once: true, amount: 0.5 }}

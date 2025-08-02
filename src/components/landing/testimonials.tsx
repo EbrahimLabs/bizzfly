@@ -56,7 +56,7 @@ export default function Testimonials() {
   return (
     <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-background">
       <motion.div 
-        className="container mx-auto px-[5vw] md:px-6"
+        className="container mx-auto px-6"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: true, amount: 0.2 }}
