@@ -108,21 +108,12 @@ export default {
           '0%, 100%': { transform: 'rotate(0deg)' },
           '50%': { transform: 'rotate(3deg)' },
         },
-        "shiny-spin": {
-          "0%": {
-            transform: "rotate(0deg)",
-          },
-          "100%": {
-            transform: "rotate(360deg)",
-          },
-        }
       },
       animation: {
         'accordion-down': 'accordion-down 0.2s ease-out',
         'accordion-up': 'accordion-up 0.2s ease-out',
         'infinite-scroll': 'infinite-scroll 25s linear infinite',
         'tilt': 'tilt 10s linear infinite',
-        'shiny-spin': 'shiny-spin 5s linear infinite',
       },
     },
   },
