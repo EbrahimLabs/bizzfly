@@ -22,7 +22,7 @@ export default {
         'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))',
       },
       backgroundSize: {
-        'grid': '1rem 1rem',
+        'grid': '1.5rem 1.5rem',
         'particle-pattern': '2rem 2rem'
       },
       fontFamily: {
