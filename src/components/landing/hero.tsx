@@ -1,9 +1,67 @@
+
 "use client";
 import { Button } from "@/components/ui/button";
 import Link from "next/link";
-import { ArrowRight, CheckCircle } from "lucide-react";
+import { ArrowRight, CheckCircle, Users, TrendingUp } from "lucide-react";
 import { motion } from "framer-motion";
-import Partners from "./partners";
+import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
+
+const EmpoweredCard = () => (
+    <motion.div
+        className="hidden lg:flex absolute top-20 -left-12 w-64"
+        initial={{ opacity: 0, x: -50, rotate: -5 }}
+        animate={{ opacity: 1, x: 0, rotate: 0 }}
+        transition={{ delay: 1, duration: 0.5, type: "spring", stiffness: 100 }}
+    >
+        <div className="bg-card/80 backdrop-blur-lg border border-border/30 rounded-2xl p-4 shadow-xl w-full">
+            <div className="flex items-center gap-3">
+                <div className="bg-primary/20 text-primary p-2 rounded-full">
+                    <Users className="h-5 w-5" />
+                </div>
+                <p className="font-semibold text-foreground">Businesses Empowered</p>
+            </div>
+            <p className="text-3xl font-bold text-foreground my-3">100+</p>
+            <div className="flex items-center">
+                <div className="flex -space-x-2">
+                    <Avatar className="h-6 w-6 border-2 border-card">
+                        <AvatarImage src="https://placehold.co/32x32.png" data-ai-hint="person" />
+                        <AvatarFallback>A</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="h-6 w-6 border-2 border-card">
+                        <AvatarImage src="https://placehold.co/32x32.png" data-ai-hint="person" />
+                        <AvatarFallback>B</AvatarFallback>
+                    </Avatar>
+                    <Avatar className="h-6 w-6 border-2 border-card">
+                        <AvatarImage src="https://placehold.co/32x32.png" data-ai-hint="person" />
+                        <AvatarFallback>C</AvatarFallback>
+                    </Avatar>
+                </div>
+                <p className="text-xs text-muted-foreground ml-2">+97 more</p>
+            </div>
+        </div>
+    </motion.div>
+);
+
+const PayoutsCard = () => (
+    <motion.div
+        className="hidden lg:flex absolute bottom-20 -right-16 w-60"
+        initial={{ opacity: 0, x: 50, rotate: 5 }}
+        animate={{ opacity: 1, x: 0, rotate: 0 }}
+        transition={{ delay: 1.2, duration: 0.5, type: "spring", stiffness: 100 }}
+    >
+        <div className="bg-card/80 backdrop-blur-lg border border-border/30 rounded-2xl p-4 shadow-xl w-full">
+             <div className="flex items-center justify-between mb-2">
+                <p className="font-semibold text-foreground">Global Payouts</p>
+                <div className="bg-primary/20 text-primary p-1.5 rounded-full">
+                    <TrendingUp className="h-4 w-4" />
+                </div>
+            </div>
+            <p className="text-3xl font-bold text-foreground">$1.2M+</p>
+            <p className="text-xs text-muted-foreground mt-1">Processed for our clients</p>
+        </div>
+    </motion.div>
+);
+
 
 export default function Hero() {
   const containerVariants = {
@@ -64,68 +122,72 @@ export default function Hero() {
     <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-grid">
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background to-80%"></div>
       <div className="container mx-auto px-6 relative z-10">
-        <motion.div
-          className="flex flex-col justify-center items-center space-y-6 text-center"
-          variants={containerVariants}
-          initial="hidden"
-          animate="visible"
-        >
-          <motion.div 
-            className="inline-flex items-center rounded-full bg-background px-3 py-1 text-sm font-medium border border-border"
-            variants={itemVariants}
-          >
-              <span className="relative flex h-2 w-2 mr-2">
-                  <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
-                  <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
-              </span>
-              Empowering 100+ Bangladeshi Businesses
-          </motion.div>
+        <div className="relative">
+            <EmpoweredCard />
+            <PayoutsCard />
+            <motion.div
+              className="flex flex-col justify-center items-center space-y-6 text-center"
+              variants={containerVariants}
+              initial="hidden"
+              animate="visible"
+            >
+              <motion.div 
+                className="inline-flex items-center rounded-full bg-background px-3 py-1 text-sm font-medium border border-border"
+                variants={itemVariants}
+              >
+                  <span className="relative flex h-2 w-2 mr-2">
+                      <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-green-400 opacity-75"></span>
+                      <span className="relative inline-flex rounded-full h-2 w-2 bg-green-500"></span>
+                  </span>
+                  Empowering 100+ Bangladeshi Businesses
+              </motion.div>
 
-          <motion.h1 
-            className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl font-headline"
-            variants={containerVariants}
-          >
-            <span className="sr-only">Your Gateway to Global Business.</span>
-            <span className="block">
-              {headline.words.slice(0, 3).map((word, i) => (
-                <motion.span key={i} className={`inline-block mr-3 lg:mr-5 ${word.className}`} variants={itemVariants}>
-                  {word.text}
-                </motion.span>
-              ))}
-            </span>
-            <span className="block">
-              {headline.words.slice(3).map((word, i) => (
-                <motion.span key={i} className={`inline-block mr-3 lg:mr-5 ${word.className}`} variants={itemVariants}>
-                  {word.text}
-                </motion.span>
-              ))}
-            </span>
-          </motion.h1>
-          <motion.p 
-            className="max-w-[700px] text-muted-foreground md:text-lg"
-            variants={itemVariants}
-          >
-          We empower Bangladeshi entrepreneurs to break barriers, offering seamless US & UK company formation, international banking, and payment gateway solutions.
-          </motion.p>
-          <motion.div 
-            className="flex flex-col gap-2 min-[400px]:flex-row"
-            variants={itemVariants}
-          >
-            <Button asChild size="lg" className="rounded-md px-6 text-base font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
-                <Link href="#contact">
-                    Get Started <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
-                </Link>
-            </Button>
-          </motion.div>
-          <motion.div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-4" variants={itemVariants}>
-              {features.map((feature, index) => (
-                  <div key={index} className="flex items-center gap-2 text-muted-foreground">
-                      <CheckCircle className="h-4 w-4 text-primary" />
-                      <span>{feature.text}</span>
-                  </div>
-              ))}
-          </motion.div>
-        </motion.div>
+              <motion.h1 
+                className="text-4xl font-semibold sm:text-5xl md:text-6xl lg:text-7xl font-headline"
+                variants={containerVariants}
+              >
+                <span className="sr-only">Your Gateway to Global Business.</span>
+                <span className="block">
+                  {headline.words.slice(0, 3).map((word, i) => (
+                    <motion.span key={i} className={`inline-block mr-3 lg:mr-5 ${word.className}`} variants={itemVariants}>
+                      {word.text}
+                    </motion.span>
+                  ))}
+                </span>
+                <span className="block">
+                  {headline.words.slice(3).map((word, i) => (
+                    <motion.span key={i} className={`inline-block mr-3 lg:mr-5 ${word.className}`} variants={itemVariants}>
+                      {word.text}
+                    </motion.span>
+                  ))}
+                </span>
+              </motion.h1>
+              <motion.p 
+                className="max-w-[700px] text-muted-foreground md:text-lg"
+                variants={itemVariants}
+              >
+              We empower Bangladeshi entrepreneurs to break barriers, offering seamless US & UK company formation, international banking, and payment gateway solutions.
+              </motion.p>
+              <motion.div 
+                className="flex flex-col gap-2 min-[400px]:flex-row"
+                variants={itemVariants}
+              >
+                <Button asChild size="lg" className="rounded-md px-6 text-base font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
+                    <Link href="#contact">
+                        Get Started <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
+                    </Link>
+                </Button>
+              </motion.div>
+              <motion.div className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 pt-4" variants={itemVariants}>
+                  {features.map((feature, index) => (
+                      <div key={index} className="flex items-center gap-2 text-muted-foreground">
+                          <CheckCircle className="h-4 w-4 text-primary" />
+                          <span>{feature.text}</span>
+                      </div>
+                  ))}
+              </motion.div>
+            </motion.div>
+        </div>
       </div>
     </section>
   );
