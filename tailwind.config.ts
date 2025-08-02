@@ -18,7 +18,7 @@ export default {
     extend: {
       backgroundImage: {
         'grid': "linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)",
-        'particle-pattern': "radial-gradient(circle, hsla(var(--foreground), 0.1) 1px, transparent 1.5px)",
+        'particle-pattern': "radial-gradient(circle, rgba(255,255,255,0.05) 1px, transparent 1.5px)",
         'radial-gradient': 'radial-gradient(var(--tw-gradient-stops))',
       },
       backgroundSize: {
