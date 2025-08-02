@@ -62,7 +62,7 @@
 
 @layer components {
   .service-icon-bg {
-    background-image: radial-gradient(ellipse at center, hsl(var(--primary)), hsl(var(--accent_dark)));
+    background-image: radial-gradient(ellipse at center, hsl(var(--primary)), hsl(180 25% 30%));
   }
 }
 
