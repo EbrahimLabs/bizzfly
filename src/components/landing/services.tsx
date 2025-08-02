@@ -124,7 +124,7 @@ export default function Services() {
             >
               <Card className="bg-card border-border hover:border-primary/50 transition-colors duration-300 group h-full flex flex-col bg-gradient-to-b from-white/5 to-transparent">
                 <CardHeader className="p-8">
-                  <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#050505] p-4 flex items-center justify-center">
+                  <div className="relative h-40 w-full overflow-hidden rounded-lg bg-[#050505] p-4 flex items-center justify-center bg-grid [background-size:2rem_2rem]">
                       <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,transparent_30%,#050505)] z-10"></div>
                       <ParticleBackground />
                       <motion.div
