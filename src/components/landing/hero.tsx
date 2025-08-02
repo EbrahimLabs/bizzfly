@@ -69,9 +69,9 @@ export default function Hero() {
               className="text-4xl font-semibold tracking-tighter sm:text-5xl md:text-6xl lg:text-7xl font-headline"
               variants={itemVariants}
             >
-              <span className="text-primary">Your Gateway</span>
+              <span className="text-foreground">Your Gateway to</span>
               <br />
-              <span className="text-foreground">to Global Business.</span>
+              <span className="text-primary">Global Business.</span>
             </motion.h1>
             <motion.p 
               className="max-w-[700px] text-muted-foreground md:text-xl"
