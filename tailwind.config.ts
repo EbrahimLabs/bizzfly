@@ -18,11 +18,9 @@ export default {
     extend: {
       backgroundImage: {
         'grid': "linear-gradient(rgba(255,255,255,0.07) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,0.07) 1px, transparent 1px)",
-        'grid-pattern': "linear-gradient(to bottom, hsl(var(--background)) 0%, transparent 50%), linear-gradient(to right, hsl(var(--border) / 0.1) 1px, transparent 1px), linear-gradient(to bottom, hsl(var(--border) / 0.1) 1px, transparent 1px)",
       },
       backgroundSize: {
         'grid': '2rem 2rem',
-        'grid-pattern': '100% 1.5rem, 1.5rem 1.5rem, 1.5rem 1.5rem',
       },
       fontFamily: {
         body: ['"Inter"', 'sans-serif'],
