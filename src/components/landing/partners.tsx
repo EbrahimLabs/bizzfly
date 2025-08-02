@@ -15,7 +15,7 @@ export default function Partners() {
                 transition={{ duration: 0.5 }}
             >
                 <div className="flex flex-col items-center justify-center space-y-4 text-center">
-                    <h3 className="text-sm font-semibold tracking-wider uppercase text-muted-foreground">
+                    <h3 className="text-sm font-semibold text-muted-foreground">
                         Trusted partnerships with international banks and payment providers
                     </h3>
                     <div className="relative w-full overflow-hidden">
@@ -26,8 +26,8 @@ export default function Partners() {
                                 </span>
                             ))}
                         </div>
-                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-card to-transparent pointer-events-none from-10%"/>
-                        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-card to-transparent pointer-events-none from-10%"/>
+                        <div className="absolute top-0 left-0 w-full h-full bg-gradient-to-r from-background to-transparent pointer-events-none from-10%"/>
+                        <div className="absolute top-0 right-0 w-full h-full bg-gradient-to-l from-background to-transparent pointer-events-none from-10%"/>
                     </div>
                 </div>
             </motion.div>
