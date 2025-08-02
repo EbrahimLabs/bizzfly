@@ -74,7 +74,7 @@ export default function Hero() {
               <span className="text-primary">Global Business.</span>
             </motion.h1>
             <motion.p 
-              className="max-w-[700px] text-muted-foreground md:text-xl"
+              className="max-w-[700px] text-muted-foreground md:text-lg"
               variants={itemVariants}
             >
              We empower Bangladeshi entrepreneurs to break barriers, offering seamless US & UK company formation, international banking, and payment gateway solutions.
@@ -83,7 +83,7 @@ export default function Hero() {
               className="flex flex-col gap-2 min-[400px]:flex-row"
               variants={itemVariants}
             >
-              <Button asChild size="lg" className="rounded-md px-6 text-base font-semibold transition-transform hover:scale-105 bg-secondary hover:bg-secondary/80 border border-border text-secondary-foreground group">
+              <Button asChild size="lg" className="rounded-md px-6 text-base font-semibold transition-transform hover:scale-105 bg-primary hover:bg-primary/90 text-primary-foreground group">
                   <Link href="#contact">
                       Get Started <ArrowRight className="h-4 w-4 ml-2 transition-transform group-hover:translate-x-1" />
                   </Link>
