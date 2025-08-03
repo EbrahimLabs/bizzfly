@@ -90,7 +90,7 @@ const Particle = ({ delay }: { delay: number }) => {
 
   useEffect(() => {
     // This code now runs only on the client
-    const size = Math.random() * 2 + 1;
+    const size = Math.random() * 3 + 1;
     const x = Math.random() * 100;
     const y = Math.random() * 100;
     setStyle({
@@ -106,7 +106,7 @@ const Particle = ({ delay }: { delay: number }) => {
 
   return (
     <motion.div
-      className="absolute bg-white/70 rounded-full"
+      className="absolute bg-white rounded-full"
       style={style}
       animate={{
         opacity: [0, 1, 0], // Twinkle effect
@@ -124,8 +124,8 @@ const Particle = ({ delay }: { delay: number }) => {
 
 const HeroParticleBackground = () => (
   <div className="absolute inset-0 overflow-hidden pointer-events-none">
-    {Array.from({ length: 50 }).map((_, index) => (
-      <Particle key={index} delay={index * 0.15} />
+    {Array.from({ length: 100 }).map((_, index) => (
+      <Particle key={index} delay={index * 0.1} />
     ))}
   </div>
 );
@@ -187,7 +187,7 @@ export default function Hero() {
   ]
 
   return (
-    <section className="relative w-full pt-36 pb-16 md:pt-40 md:pb-24 lg:pt-48 lg:pb-32 overflow-hidden bg-grid">
+    <section className="relative w-full pt-40 pb-24 md:pt-48 md:pb-32 lg:pt-56 lg:pb-40 overflow-hidden bg-grid">
       <HeroParticleBackground />
       <div className="absolute inset-0 bg-gradient-to-b from-transparent to-background to-80%"></div>
       <div className="container mx-auto px-6 relative z-10">
@@ -195,7 +195,7 @@ export default function Hero() {
             <EmpoweredCard />
             <FormationCard />
             <motion.div 
-              className="flex flex-col justify-center items-center space-y-6 text-center"
+              className="flex flex-col justify-center items-center space-y-8 text-center"
               variants={containerVariants}
               initial="hidden"
               animate="visible"
@@ -261,3 +261,5 @@ export default function Hero() {
     </section>
   );
 }
+
+    
