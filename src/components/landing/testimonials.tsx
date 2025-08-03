@@ -3,10 +3,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar";
 import { Star } from "lucide-react";
 import { motion } from "framer-motion";
-<<<<<<< HEAD
 import { useState } from "react";
-=======
->>>>>>> f7cbe365829eb7a9272277ceb5fdefdd587b5f06
 
 const testimonials = [
   {
@@ -33,7 +30,6 @@ const testimonials = [
     text: "Expanding my e-commerce business globally seemed impossible from Bangladesh. BizzFly's expertise in UK company formation and payment gateways was a game-changer for us. Invaluable service!",
     dataAiHint: "male founder",
   },
-<<<<<<< HEAD
   {
     name: "Sarah Johnson",
     title: "Digital Marketing Consultant",
@@ -106,8 +102,6 @@ const testimonials = [
     text: "BizzFly's services transformed my coaching business. I can now work with clients worldwide and receive payments seamlessly. Their support team is exceptional!",
     dataAiHint: "female coach",
   },
-=======
->>>>>>> f7cbe365829eb7a9272277ceb5fdefdd587b5f06
 ];
 
 const containerVariants = {
@@ -131,7 +125,6 @@ const itemVariants = {
   },
 };
 
-<<<<<<< HEAD
 const TestimonialCard = ({ testimonial }: { testimonial: typeof testimonials[0] }) => (
   <Card className="bg-card border-border flex flex-col h-[320px] min-w-[350px] mx-4">
     <CardContent className="p-6 flex flex-col h-full">
@@ -217,57 +210,6 @@ export default function Testimonials() {
           }
         }
       `}</style>
-=======
-export default function Testimonials() {
-  return (
-    <section id="testimonials" className="w-full py-12 md:py-24 lg:py-32 bg-background">
-      <motion.div 
-        className="container mx-auto px-6"
-        initial="hidden"
-        whileInView="visible"
-        viewport={{ once: true, amount: 0.2 }}
-        variants={containerVariants}
-      >
-        <div className="flex flex-col items-center justify-center space-y-4 text-center">
-            <motion.span variants={itemVariants} className="text-sm font-semibold uppercase tracking-wider text-primary">Testimonials</motion.span>
-            <motion.h2 variants={itemVariants} className="text-3xl font-bold sm:text-5xl font-headline">
-                Trusted By Businesses Like Yours
-            </motion.h2>
-            <motion.p variants={itemVariants} className="max-w-[900px] text-muted-foreground md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                Real stories from businesses transformed by BizzFly.
-            </motion.p>
-        </div>
-        <motion.div 
-          className="mx-auto grid grid-cols-1 gap-8 pt-12 sm:grid-cols-2 lg:grid-cols-3 lg:gap-12"
-          variants={containerVariants}
-        >
-          {testimonials.map((testimonial, index) => (
-            <motion.div key={index} variants={itemVariants}>
-              <Card className="bg-card border-border flex flex-col h-full">
-                <CardContent className="p-6 flex flex-col flex-grow">
-                  <div className="flex mb-4">
-                      {[...Array(5)].map((_, i) => (
-                          <Star key={i} className="h-5 w-5 text-primary fill-primary" />
-                      ))}
-                  </div>
-                  <p className="text-muted-foreground mb-6 flex-grow">"{testimonial.text}"</p>
-                  <div className="flex items-center gap-4 pt-4 border-t border-border/50">
-                    <Avatar className="h-12 w-12">
-                      <AvatarImage src={testimonial.image} alt={testimonial.name} data-ai-hint={testimonial.dataAiHint} />
-                      <AvatarFallback>{testimonial.avatar}</AvatarFallback>
-                    </Avatar>
-                    <div>
-                      <p className="font-semibold text-lg">{testimonial.name}</p>
-                      <p className="text-sm text-muted-foreground">{testimonial.title}</p>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            </motion.div>
-          ))}
-        </motion.div>
-      </motion.div>
->>>>>>> f7cbe365829eb7a9272277ceb5fdefdd587b5f06
     </section>
   );
 }
