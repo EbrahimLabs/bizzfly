@@ -1,7 +1,10 @@
 import Header from '@/components/landing/header';
 import Hero from '@/components/landing/hero';
 import Services from '@/components/landing/services';
+<<<<<<< HEAD
 import Pricing from '@/components/landing/pricing';
+=======
+>>>>>>> f7cbe365829eb7a9272277ceb5fdefdd587b5f06
 import Usp from '@/components/landing/usp';
 import Testimonials from '@/components/landing/testimonials';
 import Faq from '@/components/landing/faq';
@@ -17,7 +20,10 @@ export default function Home() {
         <Hero />
         <Partners />
         <Services />
+<<<<<<< HEAD
         <Pricing />
+=======
+>>>>>>> f7cbe365829eb7a9272277ceb5fdefdd587b5f06
         <Usp />
         <Testimonials />
         <Faq />
